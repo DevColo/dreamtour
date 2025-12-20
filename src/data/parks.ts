@@ -1,0 +1,167 @@
+export interface Park {
+  slug: string;
+  name: string;
+  country: string;
+  tagline: string;
+  description: string;
+  highlights: string[];
+  wildlife: string[];
+  activities: string[];
+}
+
+export const parks: Park[] = [
+  {
+    slug: 'bwindi-impenetrable-forest',
+    name: 'Bwindi Impenetrable Forest',
+    country: 'Uganda',
+    tagline: 'Home of the Mountain Gorillas',
+    description: 'Bwindi Impenetrable National Park is a UNESCO World Heritage Site and home to approximately half of the world\'s remaining mountain gorillas. This ancient rainforest offers an unforgettable gorilla trekking experience.',
+    highlights: ['Gorilla Trekking', 'Ancient Rainforest', 'Bird Watching', 'Batwa Cultural Experience'],
+    wildlife: ['Mountain Gorillas', 'Chimpanzees', 'L\'Hoest\'s Monkeys', 'Forest Elephants', '350+ Bird Species'],
+    activities: ['Gorilla Trekking', 'Nature Walks', 'Bird Watching Tours', 'Community Visits', 'Batwa Trail Experience'],
+  },
+  {
+    slug: 'queen-elizabeth',
+    name: 'Queen Elizabeth National Park',
+    country: 'Uganda',
+    tagline: 'Where Lions Climb Trees',
+    description: 'Queen Elizabeth National Park is Uganda\'s most popular safari destination, famous for its tree-climbing lions, diverse ecosystems, and the spectacular Kazinga Channel boat cruise.',
+    highlights: ['Tree-Climbing Lions', 'Kazinga Channel', 'Diverse Ecosystems', 'Chimpanzee Tracking'],
+    wildlife: ['Lions', 'Elephants', 'Hippos', 'Buffaloes', 'Chimpanzees', 'Over 600 Bird Species'],
+    activities: ['Game Drives', 'Boat Cruises', 'Chimpanzee Tracking', 'Bird Watching', 'Nature Walks'],
+  },
+  {
+    slug: 'masai-mara',
+    name: 'Masai Mara National Reserve',
+    country: 'Kenya',
+    tagline: 'The Greatest Wildlife Spectacle on Earth',
+    description: 'The Masai Mara is world-renowned for the Great Migration, where millions of wildebeest and zebras cross the Mara River. It offers exceptional Big Five sightings year-round.',
+    highlights: ['Great Migration', 'Big Five', 'Hot Air Balloon Safaris', 'Maasai Culture'],
+    wildlife: ['Lions', 'Elephants', 'Leopards', 'Cheetahs', 'Wildebeest', 'Hippos', 'Crocodiles'],
+    activities: ['Game Drives', 'Hot Air Balloon Safaris', 'Walking Safaris', 'Cultural Village Visits', 'Bush Dining'],
+  },
+  {
+    slug: 'serengeti',
+    name: 'Serengeti National Park',
+    country: 'Tanzania',
+    tagline: 'Endless Plains',
+    description: 'The Serengeti is one of the most celebrated wildlife sanctuaries in the world, hosting the largest terrestrial mammal migration and offering unparalleled safari experiences.',
+    highlights: ['Great Migration', 'Big Five', 'Kopjes Rock Formations', 'Predator Sightings'],
+    wildlife: ['Lions', 'Leopards', 'Elephants', 'Wildebeest', 'Zebras', 'Cheetahs', 'Wild Dogs'],
+    activities: ['Game Drives', 'Hot Air Balloon Safaris', 'Walking Safaris', 'Photography Safaris', 'Cultural Visits'],
+  },
+  {
+    slug: 'volcanoes-national-park',
+    name: 'Volcanoes National Park',
+    country: 'Rwanda',
+    tagline: 'The Land of Gorillas',
+    description: 'Volcanoes National Park is the Rwandan section of the Virunga Mountains and the premier destination for mountain gorilla trekking. It was where Dian Fossey conducted her groundbreaking gorilla research.',
+    highlights: ['Gorilla Trekking', 'Golden Monkey Tracking', 'Volcano Hiking', 'Dian Fossey Tomb'],
+    wildlife: ['Mountain Gorillas', 'Golden Monkeys', 'Forest Elephants', 'Buffaloes', 'Various Bird Species'],
+    activities: ['Gorilla Trekking', 'Golden Monkey Tracking', 'Volcano Hikes', 'Dian Fossey Hike', 'Cultural Experiences'],
+  },
+  {
+    slug: 'ngorongoro-crater',
+    name: 'Ngorongoro Crater',
+    country: 'Tanzania',
+    tagline: 'The Eighth Wonder of the World',
+    description: 'The Ngorongoro Crater is the world\'s largest intact volcanic caldera and hosts an incredible concentration of wildlife, including the Big Five. It\'s a UNESCO World Heritage Site.',
+    highlights: ['Volcanic Caldera', 'Big Five', 'Black Rhinos', 'Flamingo-lined Lakes'],
+    wildlife: ['Lions', 'Black Rhinos', 'Elephants', 'Flamingos', 'Hippos', 'Leopards', 'Buffaloes'],
+    activities: ['Crater Floor Game Drives', 'Rim Walks', 'Maasai Village Visits', 'Bird Watching', 'Photography'],
+  },
+  {
+    slug: 'murchison-falls',
+    name: 'Murchison Falls National Park',
+    country: 'Uganda',
+    tagline: 'The World\'s Most Powerful Waterfall',
+    description: 'Murchison Falls is Uganda\'s largest national park, where the Nile River explodes through a narrow gorge creating the world\'s most powerful waterfall. It offers excellent game viewing.',
+    highlights: ['Murchison Falls', 'Nile River', 'Big Four', 'Launch Cruise'],
+    wildlife: ['Lions', 'Elephants', 'Giraffes', 'Hippos', 'Crocodiles', 'Shoebill Storks'],
+    activities: ['Game Drives', 'Boat Cruises', 'Hiking to Falls Top', 'Sport Fishing', 'Bird Watching'],
+  },
+  {
+    slug: 'akagera-national-park',
+    name: 'Akagera National Park',
+    country: 'Rwanda',
+    tagline: 'Rwanda\'s Big Five Destination',
+    description: 'Akagera is Rwanda\'s only savanna park and the country\'s Big Five destination. After successful conservation efforts, lions and rhinos have been reintroduced, making it a complete safari experience.',
+    highlights: ['Big Five', 'Lake Ihema', 'Savanna Landscapes', 'Bird Diversity'],
+    wildlife: ['Lions', 'Elephants', 'Black Rhinos', 'Leopards', 'Hippos', 'Over 500 Bird Species'],
+    activities: ['Game Drives', 'Boat Safaris', 'Night Drives', 'Bird Watching', 'Behind the Scenes Tours'],
+  },
+  {
+    slug: 'amboseli',
+    name: 'Amboseli National Park',
+    country: 'Kenya',
+    tagline: 'Land of Giants',
+    description: 'Amboseli offers the most classic African imagery: large elephant herds against the backdrop of snow-capped Mount Kilimanjaro. It\'s famous for its large tusker elephants.',
+    highlights: ['Mount Kilimanjaro Views', 'Large Elephant Herds', 'Observation Hill', 'Maasai Culture'],
+    wildlife: ['Elephants', 'Lions', 'Cheetahs', 'Hippos', 'Buffaloes', 'Over 400 Bird Species'],
+    activities: ['Game Drives', 'Photography', 'Maasai Village Visits', 'Bird Watching', 'Nature Walks'],
+  },
+  {
+    slug: 'kibale-forest',
+    name: 'Kibale Forest National Park',
+    country: 'Uganda',
+    tagline: 'Primate Capital of the World',
+    description: 'Kibale Forest is home to the highest density of primates in Africa, including habituated chimpanzees. It\'s the premier destination for chimpanzee tracking in Uganda.',
+    highlights: ['Chimpanzee Tracking', '13 Primate Species', 'Crater Lakes', 'Bigodi Wetland'],
+    wildlife: ['Chimpanzees', 'Red Colobus Monkeys', 'L\'Hoest\'s Monkeys', 'Forest Elephants', '375 Bird Species'],
+    activities: ['Chimpanzee Tracking', 'Habituation Experience', 'Nature Walks', 'Bigodi Swamp Walk', 'Bird Watching'],
+  },
+  {
+    slug: 'nyungwe-forest',
+    name: 'Nyungwe Forest National Park',
+    country: 'Rwanda',
+    tagline: 'Ancient Rainforest Wonder',
+    description: 'Nyungwe is one of the oldest and most biodiverse rainforests in Africa. It\'s famous for chimpanzee trekking and the thrilling canopy walkway suspended high above the forest floor.',
+    highlights: ['Canopy Walkway', 'Chimpanzee Trekking', 'Ancient Rainforest', '13 Primate Species'],
+    wildlife: ['Chimpanzees', 'Colobus Monkeys', 'L\'Hoest\'s Monkeys', 'Over 310 Bird Species'],
+    activities: ['Chimpanzee Trekking', 'Canopy Walk', 'Colobus Tracking', 'Waterfall Hikes', 'Bird Watching'],
+  },
+  {
+    slug: 'tsavo',
+    name: 'Tsavo National Park',
+    country: 'Kenya',
+    tagline: 'Land of the Red Elephants',
+    description: 'Tsavo is one of the world\'s largest wildlife sanctuaries, divided into East and West sections. It\'s famous for its red elephants, which dust themselves with the area\'s distinctive red soil.',
+    highlights: ['Red Elephants', 'Mzima Springs', 'Lava Flows', 'Vast Wilderness'],
+    wildlife: ['Elephants', 'Lions', 'Leopards', 'Hippos', 'Crocodiles', 'Over 500 Bird Species'],
+    activities: ['Game Drives', 'Mzima Springs Visit', 'Nature Walks', 'Bird Watching', 'Shetani Lava Flow'],
+  },
+  {
+    slug: 'lake-nakuru',
+    name: 'Lake Nakuru National Park',
+    country: 'Kenya',
+    tagline: 'Pink Lake of Flamingos',
+    description: 'Lake Nakuru is a rhino sanctuary and was once famous for its massive flocks of flamingos. The park offers excellent Big Five viewing in a compact, beautiful setting.',
+    highlights: ['Rhino Sanctuary', 'Flamingos', 'Baboon Cliff Views', 'Diverse Landscapes'],
+    wildlife: ['Black Rhinos', 'White Rhinos', 'Lions', 'Leopards', 'Flamingos', 'Pelicans'],
+    activities: ['Game Drives', 'Rhino Tracking', 'Bird Watching', 'Picnic Lunches', 'Photography'],
+  },
+  {
+    slug: 'tarangire',
+    name: 'Tarangire National Park',
+    country: 'Tanzania',
+    tagline: 'Land of Giants',
+    description: 'Tarangire is famous for its large elephant herds, iconic baobab trees, and diverse wildlife. The Tarangire River is the lifeline that draws animals during the dry season.',
+    highlights: ['Elephant Herds', 'Baobab Trees', 'Tarangire River', 'Tree-Climbing Pythons'],
+    wildlife: ['Elephants', 'Lions', 'Leopards', 'Giraffes', 'Zebras', 'Over 550 Bird Species'],
+    activities: ['Game Drives', 'Walking Safaris', 'Night Drives', 'Bird Watching', 'Cultural Tours'],
+  },
+  {
+    slug: 'lake-manyara',
+    name: 'Lake Manyara National Park',
+    country: 'Tanzania',
+    tagline: 'A Gem of the Rift Valley',
+    description: 'Lake Manyara is a compact park famous for its tree-climbing lions, large baboon troops, and flamingo-lined shores. The lake itself covers much of the park.',
+    highlights: ['Tree-Climbing Lions', 'Flamingos', 'Rift Valley Escarpment', 'Hot Springs'],
+    wildlife: ['Lions', 'Elephants', 'Hippos', 'Flamingos', 'Baboons', 'Over 400 Bird Species'],
+    activities: ['Game Drives', 'Canopy Walkway', 'Night Drives', 'Mountain Biking', 'Cultural Tours'],
+  },
+];
+
+export const getParkBySlug = (slug: string): Park | undefined => {
+  return parks.find((p) => p.slug === slug);
+};

@@ -1,26 +1,24 @@
+import { Link } from 'react-router-dom';
 import { Plane, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 
 const footerLinks = {
   destinations: [
-    { label: 'Greece', href: '#' },
-    { label: 'Maldives', href: '#' },
-    { label: 'Bali', href: '#' },
-    { label: 'Dubai', href: '#' },
-    { label: 'Thailand', href: '#' },
+    { label: 'Uganda', href: '/destinations/uganda' },
+    { label: 'Rwanda', href: '/destinations/rwanda' },
+    { label: 'Kenya', href: '/destinations/kenya' },
+    { label: 'Tanzania', href: '/destinations/tanzania' },
   ],
   company: [
-    { label: 'About Us', href: '#about' },
-    { label: 'Our Team', href: '#' },
-    { label: 'Careers', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Press', href: '#' },
+    { label: 'Our Story', href: '/about/our-story' },
+    { label: 'Meet the Team', href: '/about/meet-the-team' },
+    { label: 'Itineraries', href: '/itineraries' },
+    { label: 'Blog', href: '/blog' },
   ],
   support: [
-    { label: 'FAQ', href: '#' },
-    { label: 'Contact Us', href: '#contact' },
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Cancellation Policy', href: '#' },
+    { label: 'Contact Us', href: '/contact' },
+    { label: 'FAQ', href: '/contact' },
+    { label: 'Privacy Policy', href: '/contact' },
+    { label: 'Terms of Service', href: '/contact' },
   ],
 };
 
@@ -34,22 +32,18 @@ const socialLinks = [
 export const Footer = () => {
   return (
     <footer id="contact" className="bg-ocean-deep text-primary-foreground">
-      {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-5 gap-12">
-          {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#home" className="flex items-center gap-3 mb-6">
+            <Link to="/" className="flex items-center gap-3 mb-6">
               <div className="p-2 rounded-full bg-primary-foreground/10">
                 <Plane className="w-6 h-6 text-gold" />
               </div>
               <div>
                 <span className="font-heading text-xl font-bold block">Dreams Destinations</span>
-                <span className="text-xs tracking-widest uppercase text-primary-foreground/60">
-                  Tours & Travel
-                </span>
+                <span className="text-xs tracking-widest uppercase text-primary-foreground/60">Tours & Travel</span>
               </div>
-            </a>
+            </Link>
             <p className="text-primary-foreground/70 leading-relaxed mb-6 max-w-sm">
               Creating unforgettable travel experiences since 2009. We specialize in crafting bespoke journeys
               to the world's most extraordinary destinations.
@@ -78,19 +72,46 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Links Columns */}
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Destinations</h4>
             <ul className="space-y-3">
               {footerLinks.destinations.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/70 hover:text-gold transition-colors text-sm"
-                  >
+                  <Link to={link.href} className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-heading font-semibold text-lg mb-4">Company</h4>
+            <ul className="space-y-3">
+              {footerLinks.company.map((link) => (
+                <li key={link.label}>
+                  <Link to={link.href} className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-heading font-semibold text-lg mb-4">Support</h4>
+            <ul className="space-y-3">
+              {footerLinks.support.map((link) => (
+                <li key={link.label}>
+                  <Link to={link.href} className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
               ))}
             </ul>
           </div>

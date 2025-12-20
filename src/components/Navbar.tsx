@@ -1,18 +1,38 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Plane } from 'lucide-react';
+import { Menu, X, Plane, ChevronDown } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Destinations', href: '#destinations' },
-  { label: 'About', href: '#about' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { 
+    label: 'About', 
+    href: '#',
+    children: [
+      { label: 'Our Story', href: '/about/our-story' },
+      { label: 'Meet the Team', href: '/about/meet-the-team' },
+    ]
+  },
+  { 
+    label: 'Destinations', 
+    href: '#',
+    children: [
+      { label: 'Uganda', href: '/destinations/uganda' },
+      { label: 'Rwanda', href: '/destinations/rwanda' },
+      { label: 'Kenya', href: '/destinations/kenya' },
+      { label: 'Tanzania', href: '/destinations/tanzania' },
+    ]
+  },
+  { label: 'Itineraries', href: '/itineraries' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +41,11 @@ export const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setOpenDropdown(null);
+  }, [location]);
 
   return (
     <header
@@ -31,67 +56,77 @@ export const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 group">
-          <div
-            className={`p-2 rounded-full transition-all duration-300 ${
-              isScrolled ? 'bg-primary' : 'bg-primary-foreground/20 backdrop-blur-sm'
-            }`}
-          >
-            <Plane
-              className={`w-6 h-6 transition-colors ${
-                isScrolled ? 'text-primary-foreground' : 'text-primary-foreground'
-              }`}
-            />
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className={`p-2 rounded-full transition-all duration-300 ${isScrolled ? 'bg-primary' : 'bg-primary-foreground/20 backdrop-blur-sm'}`}>
+            <Plane className="w-6 h-6 text-primary-foreground" />
           </div>
           <div className="flex flex-col">
-            <span
-              className={`font-heading text-xl font-bold leading-tight transition-colors ${
-                isScrolled ? 'text-primary' : 'text-primary-foreground'
-              }`}
-            >
+            <span className={`font-heading text-xl font-bold leading-tight transition-colors ${isScrolled ? 'text-primary' : 'text-primary-foreground'}`}>
               Dreams Destinations
             </span>
-            <span
-              className={`text-xs tracking-widest uppercase transition-colors ${
-                isScrolled ? 'text-muted-foreground' : 'text-primary-foreground/80'
-              }`}
-            >
+            <span className={`text-xs tracking-widest uppercase transition-colors ${isScrolled ? 'text-muted-foreground' : 'text-primary-foreground/80'}`}>
               Tours & Travel
             </span>
           </div>
-        </a>
+        </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6">
           {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className={`text-sm font-medium tracking-wide uppercase transition-all duration-300 hover:opacity-100 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all after:duration-300 hover:after:w-full ${
-                isScrolled
-                  ? 'text-foreground/80 hover:text-primary after:bg-primary'
-                  : 'text-primary-foreground/80 hover:text-primary-foreground after:bg-primary-foreground'
-              }`}
-            >
-              {item.label}
-            </a>
+            <div key={item.label} className="relative group">
+              {item.children ? (
+                <button
+                  className={`flex items-center gap-1 text-sm font-medium tracking-wide uppercase transition-all duration-300 ${
+                    isScrolled ? 'text-foreground/80 hover:text-primary' : 'text-primary-foreground/80 hover:text-primary-foreground'
+                  }`}
+                  onMouseEnter={() => setOpenDropdown(item.label)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  {item.label}
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              ) : (
+                <Link
+                  to={item.href}
+                  className={`text-sm font-medium tracking-wide uppercase transition-all duration-300 ${
+                    isScrolled ? 'text-foreground/80 hover:text-primary' : 'text-primary-foreground/80 hover:text-primary-foreground'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )}
+              
+              {item.children && (
+                <div
+                  className={`absolute top-full left-0 mt-2 w-48 bg-card rounded-lg shadow-lg overflow-hidden transition-all duration-200 ${
+                    openDropdown === item.label ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                  }`}
+                  onMouseEnter={() => setOpenDropdown(item.label)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.label}
+                      to={child.href}
+                      className="block px-4 py-3 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 
-        {/* CTA Button */}
         <div className="hidden lg:block">
-          <Button variant={isScrolled ? 'gold' : 'heroFilled'} size="default">
-            Send Inquiry
-          </Button>
+          <Link to="/contact">
+            <Button variant={isScrolled ? 'gold' : 'heroFilled'} size="default">
+              Send Inquiry
+            </Button>
+          </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="lg:hidden p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
+        <button className="lg:hidden p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? (
             <X className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} size={24} />
           ) : (
@@ -100,26 +135,37 @@ export const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-card/98 backdrop-blur-lg shadow-lg transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
+      <div className={`lg:hidden absolute top-full left-0 right-0 bg-card/98 backdrop-blur-lg shadow-lg transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <nav className="container mx-auto px-4 py-6 flex flex-col gap-2">
           {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-foreground/80 hover:text-primary text-base font-medium tracking-wide uppercase transition-colors py-2 border-b border-border/50"
-            >
-              {item.label}
-            </a>
+            <div key={item.label}>
+              {item.children ? (
+                <>
+                  <button
+                    onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                    className="flex items-center justify-between w-full text-foreground/80 text-base font-medium py-3 border-b border-border/50"
+                  >
+                    {item.label}
+                    <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.label ? 'rotate-180' : ''}`} />
+                  </button>
+                  <div className={`overflow-hidden transition-all ${openDropdown === item.label ? 'max-h-48' : 'max-h-0'}`}>
+                    {item.children.map((child) => (
+                      <Link key={child.label} to={child.href} className="block pl-4 py-2 text-muted-foreground hover:text-primary">
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <Link to={item.href} className="text-foreground/80 text-base font-medium py-3 border-b border-border/50 block">
+                  {item.label}
+                </Link>
+              )}
+            </div>
           ))}
-          <Button variant="gold" size="lg" className="mt-4">
-            Send Inquiry
-          </Button>
+          <Link to="/contact" className="mt-4">
+            <Button variant="gold" size="lg" className="w-full">Send Inquiry</Button>
+          </Link>
         </nav>
       </div>
     </header>
