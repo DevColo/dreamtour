@@ -10,36 +10,42 @@ const team = [
     role: 'Founder & CEO',
     bio: 'With over 20 years in the travel industry, David founded Dreams Destinations to share his passion for extraordinary journeys.',
     avatar: 'DM',
+    imageId: '1560250097-0b93528c311a',
   },
   {
     name: 'Sarah Chen',
     role: 'Head of Operations',
     bio: 'Sarah ensures every trip runs smoothly, bringing 15 years of logistics expertise to create seamless travel experiences.',
     avatar: 'SC',
+    imageId: '1573496359142-b8d87734a5a2',
   },
   {
     name: 'Marcus Johnson',
     role: 'Lead Travel Consultant',
     bio: "Having visited over 60 countries, Marcus crafts personalized itineraries that match each traveler's unique preferences.",
     avatar: 'MJ',
+    imageId: '1507003211169-0a1dd7228f2d',
   },
   {
     name: 'Elena Rodriguez',
     role: 'Destination Specialist - Europe',
     bio: 'Born in Spain and raised across Europe, Elena brings authentic local knowledge to every European adventure.',
     avatar: 'ER',
+    imageId: '1580489944761-15a19d654956',
   },
   {
     name: 'James Okonkwo',
     role: 'Destination Specialist - Africa',
     bio: 'A native of Kenya, James has guided hundreds of safaris and knows every hidden gem across East Africa.',
     avatar: 'JO',
+    imageId: '1506794778202-cad84cf45f1d',
   },
   {
     name: 'Priya Sharma',
     role: 'Destination Specialist - Asia',
     bio: "From the temples of Bali to the streets of Tokyo, Priya's expertise covers all of Asia's diverse destinations.",
     avatar: 'PS',
+    imageId: '1598550874175-4d0ef436c909',
   },
 ];
 
@@ -66,21 +72,49 @@ const MeetTheTeam = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member) => (
-              <div key={member.name} className="group bg-muted rounded-2xl p-8 hover:shadow-ocean transition-all duration-300">
-                <div className="w-24 h-24 rounded-full bg-gradient-ocean flex items-center justify-center text-primary-foreground text-2xl font-bold mx-auto mb-6">
-                  {member.avatar}
+              <div 
+                key={member.name} 
+                className="group relative overflow-hidden rounded-2xl h-[450px] cursor-pointer shadow-ocean"
+              >
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-gradient-ocean"
+                  style={{
+                    backgroundImage: `url(https://images.unsplash.com/photo-${member.imageId}?w=600&h=800&fit=crop&crop=face)`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center top',
+                  }}
+                />
+                
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                
+                {/* Avatar fallback overlay */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-0 transition-opacity">
+                  <div className="w-32 h-32 rounded-full bg-gradient-ocean/80 flex items-center justify-center text-primary-foreground text-4xl font-bold backdrop-blur-sm">
+                    {member.avatar}
+                  </div>
                 </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-heading font-semibold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-secondary font-medium text-sm uppercase tracking-wider mb-4">{member.role}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">{member.bio}</p>
-                  <div className="flex items-center justify-center gap-3">
-                    <button className="w-10 h-10 rounded-full bg-card hover:bg-secondary flex items-center justify-center transition-colors">
-                      <Linkedin className="w-4 h-4 text-foreground" />
-                    </button>
-                    <button className="w-10 h-10 rounded-full bg-card hover:bg-secondary flex items-center justify-center transition-colors">
-                      <Mail className="w-4 h-4 text-foreground" />
-                    </button>
+                
+                {/* Content - always visible name/role at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-all duration-500 ease-out">
+                  {/* Name and Role - always visible */}
+                  <h3 className="text-2xl font-heading font-bold text-white mb-1">{member.name}</h3>
+                  <p className="text-gold font-medium text-sm uppercase tracking-wider mb-3">{member.role}</p>
+                  
+                  {/* Bio and socials - slide up on hover */}
+                  <div className="overflow-hidden">
+                    <div className="transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                      <p className="text-white/90 text-sm leading-relaxed mb-4">{member.bio}</p>
+                      <div className="flex items-center gap-3">
+                        <button className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors backdrop-blur-sm">
+                          <Linkedin className="w-4 h-4 text-white" />
+                        </button>
+                        <button className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors backdrop-blur-sm">
+                          <Mail className="w-4 h-4 text-white" />
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
