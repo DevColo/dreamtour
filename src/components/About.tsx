@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { MapPin, Users, Camera, Shield } from 'lucide-react';
 
@@ -51,8 +52,8 @@ export const About = () => {
               Whether it's the thrill of exploring ancient ruins, the serenity of tropical beaches, or the
               richness of local encounters, every detail is tailored to meet your unique desires and needs.
             </p>
-            <Button variant="ocean" size="lg">
-              Learn More About Us
+            <Button variant="ocean" size="lg" asChild>
+              <Link to="/about/our-story">Learn More About Us</Link>
             </Button>
           </div>
 

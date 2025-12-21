@@ -1,34 +1,30 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import greeceImage from '@/assets/destination-greece.jpg';
-import maldivesImage from '@/assets/destination-maldives.jpg';
-import baliImage from '@/assets/destination-bali.jpg';
-import dubaiImage from '@/assets/destination-dubai.jpg';
 
 const destinations = [
   {
     name: 'Uganda',
     slug: 'uganda',
     description: 'Encounter majestic mountain gorillas and experience the Pearl of Africa.',
-    image: greeceImage,
+    image: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=800&h=1000&fit=crop',
   },
   {
     name: 'Rwanda',
     slug: 'rwanda',
     description: 'Discover the land of a thousand hills with incredible wildlife and culture.',
-    image: maldivesImage,
+    image: 'https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=800&h=1000&fit=crop',
   },
   {
     name: 'Kenya',
     slug: 'kenya',
     description: 'Witness the great migration and explore iconic African savannahs.',
-    image: baliImage,
+    image: 'https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800&h=1000&fit=crop',
   },
   {
     name: 'Tanzania',
     slug: 'tanzania',
     description: 'From Serengeti plains to Zanzibar beaches, an unforgettable African journey.',
-    image: dubaiImage,
+    image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&h=1000&fit=crop',
   },
 ];
 
