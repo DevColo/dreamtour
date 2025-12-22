@@ -1,68 +1,87 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {
     name: 'Sarah Mitchell',
-    location: 'New York, USA',
+    country: 'United States',
     rating: 5,
-    text: "An absolutely incredible experience! The team at Dreams Destinations planned every detail perfectly. From the luxurious accommodations to the knowledgeable guides, everything exceeded our expectations. We can't wait to book our next adventure with them!",
+    text: "Our gorilla trekking experience in Uganda was absolutely life-changing! The Dream Destinations team handled every detail perfectly, from permits to guides. Seeing the mountain gorillas up close was a dream come true.",
     avatar: 'SM',
   },
   {
     name: 'James & Emily Chen',
-    location: 'London, UK',
+    country: 'United Kingdom',
     rating: 5,
-    text: "Our honeymoon in the Maldives was nothing short of magical. The personalized service and attention to detail made us feel like royalty. The photography service was a wonderful bonus - we now have professional photos of our special trip!",
+    text: "The Great Migration safari in Kenya exceeded all expectations. Our guide's knowledge was incredible, and the lodges were luxurious. This was our honeymoon, and Dream Destinations made it unforgettable!",
     avatar: 'JE',
   },
   {
     name: 'Michael Thompson',
-    location: 'Sydney, Australia',
+    country: 'Australia',
     rating: 5,
-    text: "I've traveled with many tour companies, but Dreams Destinations stands out for their genuine care and expertise. The Greek island-hopping tour was perfectly organized, and our guide's knowledge of history and culture was outstanding.",
+    text: "I've been on many safaris, but the Tanzania expedition with Dream Destinations stands apart. The Serengeti at sunrise, the Ngorongoro Crater—every moment was magical. Truly a premium experience.",
     avatar: 'MT',
   },
   {
     name: 'Lisa Anderson',
-    location: 'Toronto, Canada',
+    country: 'Canada',
     rating: 5,
-    text: "The Bali retreat was life-changing! From the serene temple visits to the breathtaking rice terraces, every moment was carefully curated. The team's flexibility to accommodate our requests made the trip truly personalized.",
+    text: "From start to finish, our Rwanda trip was flawless. The team's attention to detail and genuine care made us feel like VIPs. The golden monkey trek was an unexpected highlight!",
     avatar: 'LA',
+  },
+  {
+    name: 'Hans Mueller',
+    country: 'Germany',
+    rating: 5,
+    text: "Exceptional service and unforgettable wildlife encounters. The Queen Elizabeth National Park boat safari was spectacular. Dream Destinations truly understands what makes an African adventure special.",
+    avatar: 'HM',
+  },
+  {
+    name: 'Priya Sharma',
+    country: 'India',
+    rating: 5,
+    text: "Our family trip to the Masai Mara was perfectly organized. The children loved every moment, and the cultural visit to a Maasai village was educational and respectful. Highly recommend!",
+    avatar: 'PS',
   },
 ];
 
 export const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+  }, []);
 
-  const prevTestimonial = () => {
+  const prevTestimonial = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(nextTestimonial, 5000);
+    return () => clearInterval(interval);
+  }, [nextTestimonial]);
 
   return (
-    <section id="testimonials" className="py-24 bg-gradient-ocean relative overflow-hidden">
+    <section id="testimonials" className="py-24 bg-primary relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-gold uppercase tracking-[0.3em] text-sm mb-4 font-medium">
+          <p className="text-accent uppercase tracking-[0.3em] text-sm mb-4 font-semibold">
             Testimonials
           </p>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-6">
             What Our Travelers Say
           </h2>
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="flex items-center gap-1 bg-gold/20 px-4 py-2 rounded-full">
-              <Star className="w-5 h-5 text-gold fill-gold" />
+          <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center gap-1 bg-accent/20 px-4 py-2 rounded-full">
+              <Star className="w-5 h-5 text-accent fill-accent" />
               <span className="text-primary-foreground font-semibold">5.0</span>
-              <span className="text-primary-foreground/70 text-sm ml-1">Based on 200+ reviews</span>
+              <span className="text-primary-foreground/70 text-sm ml-1">Exceptional Reviews</span>
             </div>
           </div>
         </div>
@@ -71,14 +90,14 @@ export const Testimonials = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-card/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-primary-foreground/10">
             {/* Quote Icon */}
-            <Quote className="absolute top-6 left-6 w-12 h-12 text-gold/30" />
+            <Quote className="absolute top-6 left-6 w-12 h-12 text-accent/30" />
 
             {/* Content */}
             <div className="relative z-10">
               {/* Stars */}
               <div className="flex gap-1 mb-6">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-gold fill-gold" />
+                  <Star key={i} className="w-5 h-5 text-accent fill-accent" />
                 ))}
               </div>
 
@@ -89,7 +108,7 @@ export const Testimonials = () => {
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center text-accent-foreground font-bold text-lg">
+                <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold text-lg">
                   {testimonials[currentIndex].avatar}
                 </div>
                 <div>
@@ -97,7 +116,7 @@ export const Testimonials = () => {
                     {testimonials[currentIndex].name}
                   </p>
                   <p className="text-primary-foreground/60 text-sm">
-                    {testimonials[currentIndex].location}
+                    {testimonials[currentIndex].country}
                   </p>
                 </div>
               </div>
@@ -129,7 +148,7 @@ export const Testimonials = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'w-8 bg-gold' : 'bg-primary-foreground/30 hover:bg-primary-foreground/50'
+                  index === currentIndex ? 'w-8 bg-accent' : 'bg-primary-foreground/30 hover:bg-primary-foreground/50'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

@@ -1,18 +1,88 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ChevronDown } from 'lucide-react';
-import heroImage from '@/assets/hero-beach.jpg';
+import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+
+const heroImages = [
+  {
+    url: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1920&h=1080&fit=crop',
+    alt: 'African Safari Lions',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1920&h=1080&fit=crop',
+    alt: 'Gorilla in Uganda',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1920&h=1080&fit=crop',
+    alt: 'Serengeti Landscape',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=1920&h=1080&fit=crop',
+    alt: 'African Elephants',
+  },
+];
 
 export const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 3000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+      {/* Background Image Carousel */}
+      {heroImages.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ backgroundImage: `url(${image.url})` }}
+          aria-hidden={index !== currentSlide}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-hero" />
+        </div>
+      ))}
+
+      {/* Carousel Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-background/20 backdrop-blur-sm hover:bg-background/30 flex items-center justify-center transition-colors"
+        aria-label="Previous slide"
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-hero" />
+        <ChevronLeft className="w-6 h-6 text-primary-foreground" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-background/20 backdrop-blur-sm hover:bg-background/30 flex items-center justify-center transition-colors"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-6 h-6 text-primary-foreground" />
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentSlide ? 'w-8 bg-accent' : 'bg-primary-foreground/50 hover:bg-primary-foreground/70'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Content */}
@@ -44,29 +114,11 @@ export const Hero = () => {
               <Link to="/itineraries">Explore Destinations</Link>
             </Button>
           </div>
-
-          {/* Stats */}
-          <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto animate-fade-up opacity-0 delay-500">
-            {[
-              { value: '15+', label: 'Years Experience' },
-              { value: '5000+', label: 'Happy Travelers' },
-              { value: '4', label: 'Countries' },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-accent mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-primary-foreground/70 uppercase tracking-wider">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float z-20">
         <a
           href="#destinations"
           className="flex flex-col items-center gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors"

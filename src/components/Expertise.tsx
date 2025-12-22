@@ -16,11 +16,6 @@ export const Expertise = () => {
                 className="w-full h-[500px] object-cover"
               />
             </div>
-            {/* Floating Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground p-6 rounded-2xl shadow-gold">
-              <p className="text-4xl font-heading font-bold">15+</p>
-              <p className="text-sm font-medium uppercase tracking-wider">Years of Excellence</p>
-            </div>
           </div>
 
           {/* Content */}
