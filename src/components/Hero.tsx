@@ -19,19 +19,20 @@ export const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center pt-20">
         <div className="max-w-4xl mx-auto">
           {/* Tagline */}
-          <p className="text-primary-foreground/80 text-sm md:text-base tracking-[0.3em] uppercase mb-6 animate-fade-up opacity-0 delay-100 font-body">
-            Explore • Experience • Embrace
+          <p className="text-accent text-sm md:text-base tracking-[0.3em] uppercase mb-6 animate-fade-up opacity-0 delay-100 font-medium">
+            Premium African Safaris
           </p>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0 delay-200">
-            A Journey That Leaves
-            <span className="block text-gold italic">a Lasting Impression</span>
+            Your African
+            <span className="block text-accent">Adventure Awaits</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-up opacity-0 delay-300 font-light leading-relaxed">
-            Discover extraordinary destinations, immerse yourself in local cultures, and create memories that will last a lifetime with our curated travel experiences.
+            Experience the magic of Africa with our expertly crafted safari adventures. 
+            From gorilla trekking to the great migration, we create unforgettable journeys.
           </p>
 
           {/* CTA Buttons */}
@@ -47,12 +48,12 @@ export const Hero = () => {
           {/* Stats */}
           <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto animate-fade-up opacity-0 delay-500">
             {[
-              { value: '50+', label: 'Destinations' },
-              { value: '1000+', label: 'Happy Travelers' },
               { value: '15+', label: 'Years Experience' },
+              { value: '5000+', label: 'Happy Travelers' },
+              { value: '4', label: 'Countries' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-1">
+                <div className="text-3xl md:text-4xl font-heading font-bold text-accent mb-1">
                   {stat.value}
                 </div>
                 <div className="text-sm text-primary-foreground/70 uppercase tracking-wider">

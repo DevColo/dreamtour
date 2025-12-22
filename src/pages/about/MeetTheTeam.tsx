@@ -133,7 +133,7 @@ const MeetTheTeam = () => {
             Passionate about travel? We're always looking for talented individuals to join our growing team.
           </p>
           <Link to="/contact">
-            <Button variant="ocean" size="lg">
+            <Button variant="brand" size="lg">
               View Open Positions
             </Button>
           </Link>

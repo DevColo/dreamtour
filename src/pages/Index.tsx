@@ -1,9 +1,11 @@
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Destinations } from '@/components/Destinations';
-import { About } from '@/components/About';
+import { Expertise } from '@/components/Expertise';
+import { WhyChooseUs } from '@/components/WhyChooseUs';
+import { JourneyCTA } from '@/components/JourneyCTA';
+import { TeamHelp } from '@/components/TeamHelp';
 import { Testimonials } from '@/components/Testimonials';
-import { CTA } from '@/components/CTA';
 import { Footer } from '@/components/Footer';
 
 const Index = () => {
@@ -12,9 +14,11 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Destinations />
-      <About />
+      <Expertise />
+      <WhyChooseUs />
+      <JourneyCTA />
+      <TeamHelp />
       <Testimonials />
-      <CTA />
       <Footer />
     </main>
   );

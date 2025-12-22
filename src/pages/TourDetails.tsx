@@ -175,7 +175,7 @@ const TourDetails = () => {
             Explore More <span className="text-gradient-ocean">Itineraries</span>
           </h2>
           <Link to="/itineraries">
-            <Button variant="ocean" size="lg">
+            <Button variant="brand" size="lg">
               View All Tours <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>

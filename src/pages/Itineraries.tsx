@@ -67,7 +67,7 @@ const Itineraries = () => {
                     <div className="lg:text-right">
                       <p className="text-gold font-heading text-2xl font-bold mb-4">{tour.price}</p>
                       <Link to={`/tour/${tour.slug}`}>
-                        <Button variant="ocean" size="lg" className="group/btn">
+                        <Button variant="brand" size="lg" className="group/btn">
                           View Details
                           <ArrowRight className="w-4 h-4 ml-2 transform transition-transform group-hover/btn:translate-x-1" />
                         </Button>

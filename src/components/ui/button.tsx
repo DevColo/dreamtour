@@ -9,17 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-ocean hover:shadow-lg",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-brand hover:shadow-lg",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Custom travel theme variants
-        gold: "bg-gradient-gold text-accent-foreground shadow-gold hover:shadow-lg hover:scale-105 border-0",
-        hero: "bg-primary/10 backdrop-blur-sm text-primary-foreground border-2 border-primary-foreground/30 hover:bg-primary-foreground hover:text-primary",
+        // Brand theme variants
+        gold: "bg-gradient-gold text-accent-foreground shadow-gold hover:shadow-lg hover:scale-105 border-0 font-semibold",
+        hero: "bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground border-2 border-primary-foreground/30 hover:bg-primary-foreground hover:text-primary",
         heroFilled: "bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-lg hover:shadow-xl hover:scale-105",
-        ocean: "bg-gradient-ocean text-primary-foreground shadow-ocean hover:shadow-glow hover:scale-105 border-0",
+        brand: "bg-gradient-brand text-primary-foreground shadow-brand hover:shadow-glow hover:scale-105 border-0",
+        green: "bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-brand hover:scale-105",
       },
       size: {
         default: "h-10 px-6 py-2",

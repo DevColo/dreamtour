@@ -34,14 +34,15 @@ export const Destinations = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-secondary uppercase tracking-[0.3em] text-sm mb-4 font-medium">
+          <p className="text-secondary uppercase tracking-[0.3em] text-sm mb-4 font-semibold">
             Our Destinations
           </p>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Explore Dream <span className="text-gradient-ocean">Destinations</span>
+            Explore Our <span className="text-primary">Destinations</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            From tropical paradises to ancient wonders, we offer carefully curated journeys to the world's most breathtaking locations.
+            Discover the magic of East Africa through our carefully curated destinations, 
+            each offering unique experiences and unforgettable memories.
           </p>
         </div>
 
@@ -51,7 +52,7 @@ export const Destinations = () => {
             <Link
               to={`/destinations/${destination.slug}`}
               key={destination.name}
-              className="group relative overflow-hidden rounded-2xl shadow-ocean cursor-pointer h-[400px] block"
+              className="group relative overflow-hidden rounded-xl shadow-brand cursor-pointer h-[400px] block"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Background Image */}
@@ -61,7 +62,7 @@ export const Destinations = () => {
               />
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/95 via-ocean-deep/40 to-transparent transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent transition-opacity duration-300" />
 
               {/* Content */}
               <div className="absolute inset-0 p-6 flex flex-col justify-end">
@@ -71,7 +72,7 @@ export const Destinations = () => {
                 <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                   {destination.description}
                 </p>
-                <div className="flex items-center gap-2 text-gold text-sm font-medium uppercase tracking-wider opacity-0 transform translate-y-4 transition-all duration-300 delay-100 group-hover:opacity-100 group-hover:translate-y-0">
+                <div className="flex items-center gap-2 text-accent text-sm font-semibold uppercase tracking-wider opacity-0 transform translate-y-4 transition-all duration-300 delay-100 group-hover:opacity-100 group-hover:translate-y-0">
                   <span>Explore</span>
                   <ArrowRight className="w-4 h-4 transform transition-transform group-hover:translate-x-1" />
                 </div>

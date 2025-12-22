@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Plane, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const footerLinks = {
   destinations: [
@@ -31,53 +32,53 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="bg-ocean-deep text-primary-foreground">
+    <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-5 gap-12">
+          {/* Logo & Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="p-2 rounded-full bg-primary-foreground/10">
-                <Plane className="w-6 h-6 text-gold" />
-              </div>
-              <div>
-                <span className="font-heading text-xl font-bold block">Dreams Destinations</span>
-                <span className="text-xs tracking-widest uppercase text-primary-foreground/60">Tours & Travel</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="Dream Destination Tours & Travel" 
+                className="h-20 w-auto object-contain bg-white rounded-lg p-2"
+              />
             </Link>
-            <p className="text-primary-foreground/70 leading-relaxed mb-6 max-w-sm">
-              Creating unforgettable travel experiences since 2009. We specialize in crafting bespoke journeys
-              to the world's most extraordinary destinations.
+            <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-sm">
+              Creating unforgettable African safari experiences since 2009. We specialize in crafting 
+              bespoke journeys to Uganda, Rwanda, Kenya, and Tanzania.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="mailto:info@dreamsdestinations.com"
-                className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors"
+                href="mailto:info@dreamdestination.com"
+                className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>info@dreamsdestinations.com</span>
+                <span>info@dreamdestination.com</span>
               </a>
               <a
-                href="tel:+1234567890"
-                className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors"
+                href="tel:+256700000000"
+                className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>+1 (234) 567-890</span>
+                <span>+256 700 000 000</span>
               </a>
-              <div className="flex items-start gap-3 text-primary-foreground/70">
+              <div className="flex items-start gap-3 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mt-1 shrink-0" />
-                <span>123 Travel Street, Suite 100<br />New York, NY 10001</span>
+                <span>Kampala, Uganda</span>
               </div>
             </div>
           </div>
 
+          {/* Destinations */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Destinations</h4>
+            <h4 className="font-heading font-bold text-lg mb-4">Destinations</h4>
             <ul className="space-y-3">
               {footerLinks.destinations.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+                  <Link to={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -85,12 +86,13 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Company */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Company</h4>
+            <h4 className="font-heading font-bold text-lg mb-4">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+                  <Link to={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -98,12 +100,13 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Support */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Support</h4>
+            <h4 className="font-heading font-bold text-lg mb-4">Support</h4>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+                  <Link to={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -116,8 +119,8 @@ export const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-primary-foreground/50 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} Dreams Destinations Tours & Travel. All rights reserved.
+          <p className="text-primary-foreground/60 text-sm text-center md:text-left">
+            © {new Date().getFullYear()} Dream Destination Tours & Travel. All rights reserved.
           </p>
 
           {/* Social Links */}
@@ -126,7 +129,7 @@ export const Footer = () => {
               <a
                 key={social.label}
                 href={social.href}
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-accent-foreground flex items-center justify-center transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground flex items-center justify-center transition-all duration-300"
                 aria-label={social.label}
               >
                 <social.icon className="w-4 h-4" />

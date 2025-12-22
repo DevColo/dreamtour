@@ -47,20 +47,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        ocean: {
-          deep: "hsl(var(--ocean-deep))",
-          medium: "hsl(var(--ocean-medium))",
-          light: "hsl(var(--ocean-light))",
-        },
-        sky: "hsl(var(--sky))",
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
+        brand: {
+          blue: "hsl(var(--brand-blue))",
+          green: "hsl(var(--brand-green))",
+          gold: "hsl(var(--brand-gold))",
         },
         cream: "hsl(var(--cream))",
+        gold: {
+          DEFAULT: "hsl(var(--accent))",
+        },
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "serif"],
+        heading: ["var(--font-heading)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"],
       },
       borderRadius: {
@@ -103,13 +101,13 @@ export default {
         shimmer: "shimmer 8s ease-in-out infinite",
       },
       boxShadow: {
-        ocean: "var(--shadow-md)",
+        brand: "var(--shadow-md)",
         glow: "var(--shadow-glow)",
         gold: "var(--shadow-gold)",
       },
       backgroundImage: {
-        "gradient-ocean": "var(--gradient-ocean)",
-        "gradient-sky": "var(--gradient-sky)",
+        "gradient-brand": "var(--gradient-brand)",
+        "gradient-green": "var(--gradient-green)",
         "gradient-hero": "var(--gradient-hero-overlay)",
         "gradient-gold": "var(--gradient-gold)",
         "gradient-card": "var(--gradient-card)",
