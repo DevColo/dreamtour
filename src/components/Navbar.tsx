@@ -50,10 +50,10 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-card ${
         isScrolled
-          ? 'bg-card shadow-brand py-2'
-          : 'bg-background/80 backdrop-blur-sm py-4'
+          ? 'shadow-brand py-2'
+          : 'py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -72,9 +72,7 @@ export const Navbar = () => {
             <div key={item.label} className="relative group">
               {item.children ? (
                 <button
-                  className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-all duration-300 ${
-                    isScrolled ? 'text-foreground hover:text-secondary' : 'text-primary-foreground hover:text-accent'
-                  }`}
+                  className="flex items-center gap-1 text-sm font-medium tracking-wide transition-all duration-300 text-foreground hover:text-secondary"
                   onMouseEnter={() => setOpenDropdown(item.label)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
@@ -84,9 +82,7 @@ export const Navbar = () => {
               ) : (
                 <Link
                   to={item.href}
-                  className={`text-sm font-medium tracking-wide transition-all duration-300 ${
-                    isScrolled ? 'text-foreground hover:text-secondary' : 'text-primary-foreground hover:text-accent'
-                  }`}
+                  className="text-sm font-medium tracking-wide transition-all duration-300 text-foreground hover:text-secondary"
                 >
                   {item.label}
                 </Link>
@@ -118,7 +114,7 @@ export const Navbar = () => {
         {/* CTA Button */}
         <div className="hidden lg:block">
           <Link to="/contact">
-            <Button variant={isScrolled ? 'gold' : 'heroFilled'} size="default">
+            <Button variant="gold" size="default">
               Send Inquiry
             </Button>
           </Link>
@@ -127,9 +123,9 @@ export const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <button className="lg:hidden p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? (
-            <X className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} size={24} />
+            <X className="text-foreground" size={24} />
           ) : (
-            <Menu className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} size={24} />
+            <Menu className="text-foreground" size={24} />
           )}
         </button>
       </div>
