@@ -7,6 +7,7 @@ import { JourneyCTA } from '@/components/JourneyCTA';
 import { TeamHelp } from '@/components/TeamHelp';
 import { Testimonials } from '@/components/Testimonials';
 import { Footer } from '@/components/Footer';
+import { PersistentCTA } from '@/components/PersistentCTA';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <TeamHelp />
       <Testimonials />
       <Footer />
+      <PersistentCTA />
     </main>
   );
 };
