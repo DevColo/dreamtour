@@ -21,15 +21,19 @@ const heroImages = [
 
 export const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [nextSlideIndex, setNextSlideIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const nextSlide = useCallback(() => {
+    if (isTransitioning) return;
     setIsTransitioning(true);
+    setNextSlideIndex((currentSlide + 1) % heroImages.length);
+    
     setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
       setIsTransitioning(false);
-    }, 500);
-  }, []);
+    }, 700);
+  }, [currentSlide, isTransitioning]);
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
@@ -38,15 +42,25 @@ export const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Slide Left Animation */}
+      {/* Background Images with Slide Animation */}
       <div className="absolute inset-0">
+        {/* Next image (slides in from right) */}
         <div
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 ease-in-out ${
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-in-out ${
+            isTransitioning ? 'translate-x-0' : 'translate-x-full'
+          }`}
+          style={{ backgroundImage: `url(${heroImages[nextSlideIndex].url})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-hero" />
+        </div>
+        
+        {/* Current image (slides out to left) */}
+        <div
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-in-out ${
             isTransitioning ? '-translate-x-full' : 'translate-x-0'
           }`}
           style={{ backgroundImage: `url(${heroImages[currentSlide].url})` }}
         >
-          {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-hero" />
         </div>
       </div>
