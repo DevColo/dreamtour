@@ -1,66 +1,94 @@
-import { useState, useEffect, useCallback } from 'react';
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
     name: 'Sarah Mitchell',
     country: 'United States',
     rating: 5,
-    text: "Our gorilla trekking experience in Uganda was absolutely life-changing! The Dream Destinations team handled every detail perfectly, from permits to guides. Seeing the mountain gorillas up close was a dream come true.",
+    text: "Our gorilla trekking experience in Uganda was absolutely life-changing! The Dream Destinations team handled every detail perfectly.",
     avatar: 'SM',
   },
   {
     name: 'James & Emily Chen',
     country: 'United Kingdom',
     rating: 5,
-    text: "The Great Migration safari in Kenya exceeded all expectations. Our guide's knowledge was incredible, and the lodges were luxurious. This was our honeymoon, and Dream Destinations made it unforgettable!",
+    text: "The Great Migration safari in Kenya exceeded all expectations. Our guide's knowledge was incredible!",
     avatar: 'JE',
   },
   {
     name: 'Michael Thompson',
     country: 'Australia',
     rating: 5,
-    text: "I've been on many safaris, but the Tanzania expedition with Dream Destinations stands apart. The Serengeti at sunrise, the Ngorongoro Crater—every moment was magical. Truly a premium experience.",
+    text: "I've been on many safaris, but the Tanzania expedition with Dream Destinations stands apart. Truly premium!",
     avatar: 'MT',
   },
   {
     name: 'Lisa Anderson',
     country: 'Canada',
     rating: 5,
-    text: "From start to finish, our Rwanda trip was flawless. The team's attention to detail and genuine care made us feel like VIPs. The golden monkey trek was an unexpected highlight!",
+    text: "From start to finish, our Rwanda trip was flawless. The team's attention to detail made us feel like VIPs.",
     avatar: 'LA',
   },
   {
     name: 'Hans Mueller',
     country: 'Germany',
     rating: 5,
-    text: "Exceptional service and unforgettable wildlife encounters. The Queen Elizabeth National Park boat safari was spectacular. Dream Destinations truly understands what makes an African adventure special.",
+    text: "Exceptional service and unforgettable wildlife encounters. Dream Destinations truly understands African adventures.",
     avatar: 'HM',
   },
   {
     name: 'Priya Sharma',
     country: 'India',
     rating: 5,
-    text: "Our family trip to the Masai Mara was perfectly organized. The children loved every moment, and the cultural visit to a Maasai village was educational and respectful. Highly recommend!",
+    text: "Our family trip to the Masai Mara was perfectly organized. The children loved every moment!",
     avatar: 'PS',
+  },
+  {
+    name: 'Sophie Laurent',
+    country: 'France',
+    rating: 5,
+    text: "An unforgettable journey through the Serengeti. Professional service and breathtaking experiences!",
+    avatar: 'SL',
+  },
+  {
+    name: 'David Nakamura',
+    country: 'Japan',
+    rating: 5,
+    text: "The attention to detail was remarkable. Every aspect of our safari was carefully planned and executed.",
+    avatar: 'DN',
   },
 ];
 
 export const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const nextTestimonial = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  }, []);
-
-  const prevTestimonial = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const scroll = useCallback(() => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      
+      setScrollPosition((prev) => {
+        const newPos = prev + 1;
+        if (newPos >= maxScroll) {
+          return 0;
+        }
+        return newPos;
+      });
+    }
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(nextTestimonial, 5000);
+    const interval = setInterval(scroll, 30);
     return () => clearInterval(interval);
-  }, [nextTestimonial]);
+  }, [scroll]);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = scrollPosition;
+    }
+  }, [scrollPosition]);
 
   return (
     <section id="testimonials" className="py-24 bg-primary relative overflow-hidden">
@@ -70,7 +98,7 @@ export const Testimonials = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <p className="text-accent uppercase tracking-[0.3em] text-sm mb-4 font-semibold">
             Testimonials
           </p>
@@ -86,74 +114,49 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        {/* Testimonial Card */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative bg-card/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-primary-foreground/10">
-            {/* Quote Icon */}
-            <Quote className="absolute top-6 left-6 w-12 h-12 text-accent/30" />
+        {/* Testimonials Carousel */}
+        <div 
+          ref={containerRef}
+          className="flex gap-6 overflow-x-hidden pb-4"
+          style={{ scrollBehavior: 'auto' }}
+        >
+          {/* Double the testimonials for seamless loop */}
+          {[...testimonials, ...testimonials].map((testimonial, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-80 bg-card/10 backdrop-blur-md rounded-2xl p-6 border border-primary-foreground/10"
+            >
+              {/* Quote Icon */}
+              <Quote className="w-8 h-8 text-accent/40 mb-4" />
 
-            {/* Content */}
-            <div className="relative z-10">
               {/* Stars */}
-              <div className="flex gap-1 mb-6">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-accent fill-accent" />
+              <div className="flex gap-1 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-accent fill-accent" />
                 ))}
               </div>
 
               {/* Text */}
-              <p className="text-primary-foreground text-lg md:text-xl leading-relaxed mb-8 italic">
-                "{testimonials[currentIndex].text}"
+              <p className="text-primary-foreground text-sm leading-relaxed mb-6 italic line-clamp-4">
+                "{testimonial.text}"
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold text-lg">
-                  {testimonials[currentIndex].avatar}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
+                  {testimonial.avatar}
                 </div>
                 <div>
-                  <p className="text-primary-foreground font-semibold text-lg">
-                    {testimonials[currentIndex].name}
+                  <p className="text-primary-foreground font-semibold text-sm">
+                    {testimonial.name}
                   </p>
-                  <p className="text-primary-foreground/60 text-sm">
-                    {testimonials[currentIndex].country}
+                  <p className="text-primary-foreground/60 text-xs">
+                    {testimonial.country}
                   </p>
                 </div>
               </div>
             </div>
-
-            {/* Navigation */}
-            <div className="absolute right-6 bottom-6 flex gap-2">
-              <button
-                onClick={prevTestimonial}
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeft className="w-5 h-5 text-primary-foreground" />
-              </button>
-              <button
-                onClick={nextTestimonial}
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
-                aria-label="Next testimonial"
-              >
-                <ChevronRight className="w-5 h-5 text-primary-foreground" />
-              </button>
-            </div>
-          </div>
-
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'w-8 bg-accent' : 'bg-primary-foreground/30 hover:bg-primary-foreground/50'
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
