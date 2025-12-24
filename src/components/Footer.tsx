@@ -38,32 +38,10 @@ export const Footer = () => {
                 className="h-20 w-auto object-contain bg-white rounded-lg p-2"
               />
             </Link>
-            <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-sm">
+            <p className="text-primary-foreground/80 leading-relaxed max-w-sm">
               Creating unforgettable African safari experiences since 2009. We specialize in crafting 
               bespoke journeys to Uganda, Rwanda, Kenya, and Tanzania.
             </p>
-
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <a
-                href="mailto:info@dreamdestination.com"
-                className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>info@dreamdestination.com</span>
-              </a>
-              <a
-                href="tel:+256700000000"
-                className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>+256 700 000 000</span>
-              </a>
-              <div className="flex items-start gap-3 text-primary-foreground/80">
-                <MapPin className="w-4 h-4 mt-1 shrink-0" />
-                <span>Kampala, Uganda</span>
-              </div>
-            </div>
           </div>
 
           {/* Destinations */}
@@ -114,7 +92,7 @@ export const Footer = () => {
               </a>
               <div className="flex items-start gap-3 text-primary-foreground/80 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Kampala, Uganda</span>
+                <span>Rwanda, Kigali</span>
               </div>
             </div>
           </div>
