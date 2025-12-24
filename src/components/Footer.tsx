@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, MessageCircle } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const footerLinks = {
@@ -26,8 +26,8 @@ const footerLinks = {
 const socialLinks = [
   { icon: Facebook, href: '#', label: 'Facebook' },
   { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Youtube, href: '#', label: 'Youtube' },
+  { icon: Twitter, href: '#', label: 'X' },
+  { icon: MessageCircle, href: 'https://wa.me/250780714871', label: 'WhatsApp' },
 ];
 
 export const Footer = () => {
