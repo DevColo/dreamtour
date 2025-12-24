@@ -33,4 +33,4 @@ npm run build
 
 - Email: info@dreamdestination.com
 - Phone: +256 700 000 000
-- Location: Kampala, Uganda
+- Location: Rwanda, Kigali
