@@ -15,12 +15,6 @@ const footerLinks = {
     { label: 'Itineraries', href: '/itineraries' },
     { label: 'Blog', href: '/blog' },
   ],
-  support: [
-    { label: 'Contact Us', href: '/contact' },
-    { label: 'FAQ', href: '/contact' },
-    { label: 'Privacy Policy', href: '/contact' },
-    { label: 'Terms of Service', href: '/contact' },
-  ],
 };
 
 const socialLinks = [
@@ -100,18 +94,29 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Contact Information */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-4">Support</h4>
-            <ul className="space-y-3">
-              {footerLinks.support.map((link) => (
-                <li key={link.label}>
-                  <Link to={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h4 className="font-heading font-bold text-lg mb-4">Get in Touch</h4>
+            <div className="space-y-3">
+              <a
+                href="mailto:info@dreamdestination.com"
+                className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+              >
+                <Mail className="w-4 h-4 shrink-0" />
+                <span>info@dreamdestination.com</span>
+              </a>
+              <a
+                href="tel:+256700000000"
+                className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+              >
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>+256 700 000 000</span>
+              </a>
+              <div className="flex items-start gap-3 text-primary-foreground/80 text-sm">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                <span>Kampala, Uganda</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
