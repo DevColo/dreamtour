@@ -91,25 +91,25 @@ export const Testimonials = () => {
   }, [scrollPosition]);
 
   return (
-    <section id="testimonials" className="py-24 bg-primary relative overflow-hidden">
+    <section id="testimonials" className="py-24 bg-[hsl(35,45%,92%)] relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className="text-accent uppercase tracking-[0.3em] text-sm mb-4 font-semibold">
+          <p className="text-secondary uppercase tracking-[0.3em] text-sm mb-4 font-semibold">
             Testimonials
           </p>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
             What Our Travelers Say
           </h2>
           <div className="flex items-center justify-center gap-2">
-            <div className="flex items-center gap-1 bg-accent/20 px-4 py-2 rounded-full">
+            <div className="flex items-center gap-1 bg-accent/30 px-4 py-2 rounded-full">
               <Star className="w-5 h-5 text-accent fill-accent" />
-              <span className="text-primary-foreground font-semibold">5.0</span>
-              <span className="text-primary-foreground/70 text-sm ml-1">Exceptional Reviews</span>
+              <span className="text-foreground font-semibold">5.0</span>
+              <span className="text-muted-foreground text-sm ml-1">Exceptional Reviews</span>
             </div>
           </div>
         </div>
@@ -124,10 +124,10 @@ export const Testimonials = () => {
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-80 bg-card/10 backdrop-blur-md rounded-2xl p-6 border border-primary-foreground/10"
+              className="flex-shrink-0 w-80 bg-card backdrop-blur-md rounded-2xl p-6 border border-border shadow-lg"
             >
               {/* Quote Icon */}
-              <Quote className="w-8 h-8 text-accent/40 mb-4" />
+              <Quote className="w-8 h-8 text-secondary/40 mb-4" />
 
               {/* Stars */}
               <div className="flex gap-1 mb-4">
@@ -137,20 +137,20 @@ export const Testimonials = () => {
               </div>
 
               {/* Text */}
-              <p className="text-primary-foreground text-sm leading-relaxed mb-6 italic line-clamp-4">
+              <p className="text-foreground text-sm leading-relaxed mb-6 italic line-clamp-4">
                 "{testimonial.text}"
               </p>
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground font-bold text-sm">
                   {testimonial.avatar}
                 </div>
                 <div>
-                  <p className="text-primary-foreground font-semibold text-sm">
+                  <p className="text-foreground font-semibold text-sm">
                     {testimonial.name}
                   </p>
-                  <p className="text-primary-foreground/60 text-xs">
+                  <p className="text-muted-foreground text-xs">
                     {testimonial.country}
                   </p>
                 </div>

@@ -15,6 +15,7 @@ import TourDetails from "./pages/TourDetails";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
+import Booking from "./pages/Booking";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
           
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="/booking" element={<Booking />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>

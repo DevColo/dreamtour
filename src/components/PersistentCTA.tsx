@@ -38,7 +38,7 @@ export const PersistentCTA = () => {
 
       {/* Book Now */}
       <Link
-        to="/contact?type=booking"
+        to="/booking"
         className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 group"
         aria-label="Book Now"
       >
