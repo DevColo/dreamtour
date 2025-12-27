@@ -1,10 +1,11 @@
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Destinations } from '@/components/Destinations';
-import { Expertise } from '@/components/Expertise';
-import { WhyChooseUs } from '@/components/WhyChooseUs';
+import { ServicesOverview } from '@/components/home/ServicesOverview';
+import { WhyChooseUsEnhanced } from '@/components/home/WhyChooseUsEnhanced';
+import { TrustCredibility } from '@/components/home/TrustCredibility';
+import { TravelRequirements } from '@/components/home/TravelRequirements';
 import { JourneyCTA } from '@/components/JourneyCTA';
-import { TeamHelp } from '@/components/TeamHelp';
 import { Testimonials } from '@/components/Testimonials';
 import { Footer } from '@/components/Footer';
 import { PersistentCTA } from '@/components/PersistentCTA';
@@ -15,10 +16,11 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Destinations />
-      <Expertise />
-      <WhyChooseUs />
+      <ServicesOverview />
+      <WhyChooseUsEnhanced />
+      <TrustCredibility />
+      <TravelRequirements />
       <JourneyCTA />
-      <TeamHelp />
       <Testimonials />
       <Footer />
       <PersistentCTA />
