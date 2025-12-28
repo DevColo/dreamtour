@@ -46,10 +46,10 @@ const DestinationPage = () => {
       />
 
       {/* Quick Facts */}
-      <section className="py-12 bg-muted border-b border-border/50">
+      <section className="py-12 bg-muted border-b border-border/50" id="quick-facts">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 p-5 rounded-2xl bg-card border border-border/50 shadow-sm">
+            <div className="flex items-center gap-4 p-5 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center">
                 <Calendar className="w-6 h-6 text-secondary" />
               </div>
@@ -58,7 +58,7 @@ const DestinationPage = () => {
                 <p className="font-semibold text-foreground">{country.bestTime}</p>
               </div>
             </div>
-            <div className="flex items-center gap-4 p-5 rounded-2xl bg-card border border-border/50 shadow-sm">
+            <div className="flex items-center gap-4 p-5 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center">
                 <Coins className="w-6 h-6 text-secondary" />
               </div>
@@ -67,7 +67,7 @@ const DestinationPage = () => {
                 <p className="font-semibold text-foreground">{country.currency}</p>
               </div>
             </div>
-            <div className="flex items-center gap-4 p-5 rounded-2xl bg-card border border-border/50 shadow-sm">
+            <div className="flex items-center gap-4 p-5 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center">
                 <Languages className="w-6 h-6 text-secondary" />
               </div>
@@ -80,23 +80,43 @@ const DestinationPage = () => {
         </div>
       </section>
 
-      {/* Country Overview */}
-      <CountryOverview data={country.overview} countryName={country.name} />
+      {/* Section 1: Country Overview */}
+      <div id="overview">
+        <CountryOverview data={country.overview} countryName={country.name} />
+      </div>
 
-      {/* Sample Itineraries */}
-      <CountryItineraries itineraries={country.itineraries} countryName={country.name} />
+      {/* Section Divider */}
+      <div className="container mx-auto px-4">
+        <div className="border-t border-border/30" />
+      </div>
 
-      {/* Activity Highlights */}
-      <ActivityHighlights activities={country.activities} countryName={country.name} />
+      {/* Section 2: Sample Itineraries */}
+      <div id="itineraries">
+        <CountryItineraries itineraries={country.itineraries} countryName={country.name} />
+      </div>
 
-      {/* National Parks */}
-      <NationalParks parks={country.parks} countryName={country.name} />
+      {/* Section Divider */}
+      <div className="container mx-auto px-4">
+        <div className="border-t border-border/30" />
+      </div>
 
-      {/* Car Rental */}
-      <CarRentalSection cars={country.cars} countryName={country.name} />
+      {/* Section 3: Activity Highlights */}
+      <div id="activities">
+        <ActivityHighlights activities={country.activities} countryName={country.name} />
+      </div>
 
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-primary to-secondary">
+      {/* Section 4: National Parks (alternating background) */}
+      <div id="parks">
+        <NationalParks parks={country.parks} countryName={country.name} />
+      </div>
+
+      {/* Section 5: Car Rental */}
+      <div id="car-rental">
+        <CarRentalSection cars={country.cars} countryName={country.name} />
+      </div>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-primary to-secondary" id="cta">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-6">
             Ready to Explore {country.name}?
