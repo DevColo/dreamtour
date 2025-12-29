@@ -75,12 +75,7 @@ export const CountryItineraries = ({ itineraries, countryName }: CountryItinerar
                     <p className="text-xs text-muted-foreground">From</p>
                     <p className="text-xl font-heading font-bold text-accent">{itinerary.price}</p>
                   </div>
-                  <Link to="/contact">
-                    <Button variant="brand" size="sm">
-                      View Itinerary
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </Link>
+                 
                 </div>
               </div>
             </div>
