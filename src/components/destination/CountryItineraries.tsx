@@ -68,15 +68,6 @@ export const CountryItineraries = ({ itineraries, countryName }: CountryItinerar
                     </span>
                   ))}
                 </div>
-
-                {/* Price & CTA */}
-                <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                  <div>
-                    <p className="text-xs text-muted-foreground">From</p>
-                    <p className="text-xl font-heading font-bold text-accent">{itinerary.price}</p>
-                  </div>
-                 
-                </div>
               </div>
             </div>
           ))}

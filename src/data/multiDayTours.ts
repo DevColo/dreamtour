@@ -16,7 +16,6 @@ export const multiDayToursData: CategoryData = {
       description: 'Short wildlife adventure featuring sunset boat safari, full-day game drives, and Big Five viewing in Rwanda\'s only savannah park.',
       image: 'https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&h=600&fit=crop',
       highlights: ['Big Five viewing', 'Boat safari', 'Full-day game drive'],
-      price: 'Available on request',
     },
     {
       id: '2-day-chimp',
@@ -25,7 +24,6 @@ export const multiDayToursData: CategoryData = {
       description: 'Overnight primate adventure in Nyungwe National Park with chimpanzee trekking and optional Canopy Walk experience.',
       image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&h=600&fit=crop',
       highlights: ['Chimpanzee trekking', 'Rainforest immersion', 'Tea plantations'],
-      price: 'Available on request',
     },
     {
       id: '3-day-gorilla',
@@ -34,7 +32,6 @@ export const multiDayToursData: CategoryData = {
       description: 'Ultimate gorilla experience with Kigali city tour, Genocide Memorial visit, cultural village, and Dian Fossey Campus.',
       image: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=800&h=600&fit=crop',
       highlights: ['Gorilla trekking', 'Cultural experiences', 'Conservation insights'],
-      price: 'Available on request',
     },
     {
       id: '3-day-lake-kivu',
@@ -43,7 +40,6 @@ export const multiDayToursData: CategoryData = {
       description: 'Extended lakeside relaxation with boat safaris, island exploration, Ndaba Rock visit, and local cultural experiences.',
       image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
       highlights: ['Island boat safari', 'Ndaba Rock visit', 'Lakeside relaxation'],
-      price: 'Available on request',
     },
     {
       id: '7-day-classic',
@@ -52,7 +48,6 @@ export const multiDayToursData: CategoryData = {
       description: 'Our top recommended safari combining Nyungwe, Lake Kivu, and Volcanoes with chimpanzees, gorillas, golden monkeys, and canopy walks.',
       image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&h=600&fit=crop',
       highlights: ['Complete Rwanda experience', 'All major attractions', 'Expert guiding'],
-      price: 'Available on request',
     },
   ],
 };

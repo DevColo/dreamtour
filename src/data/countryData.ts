@@ -7,7 +7,6 @@ export interface CountryItinerary {
   description: string;
   image: string;
   highlights: string[];
-  price: string;
 }
 
 export interface CountryActivity {
@@ -77,7 +76,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Trek through Bwindi Impenetrable Forest to encounter mountain gorillas in their natural habitat.',
         image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&h=400&fit=crop',
         highlights: ['Gorilla Trekking', 'Bwindi Forest', 'Lake Bunyonyi'],
-        price: '$2,500',
       },
       {
         id: 'ug-2',
@@ -86,7 +84,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Experience the best of Uganda\'s wildlife from Queen Elizabeth to Murchison Falls.',
         image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop',
         highlights: ['Big Five Safari', 'Boat Cruises', 'Tree-climbing Lions'],
-        price: '$3,200',
       },
       {
         id: 'ug-3',
@@ -95,7 +92,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Witness the world\'s most powerful waterfall and spot diverse wildlife.',
         image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&h=400&fit=crop',
         highlights: ['Murchison Falls', 'Game Drives', 'Nile Boat Safari'],
-        price: '$1,500',
       },
       {
         id: 'ug-4',
@@ -104,7 +100,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Track chimpanzees in Kibale Forest, the primate capital of the world.',
         image: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=600&h=400&fit=crop',
         highlights: ['Chimp Trekking', 'Kibale Forest', 'Bigodi Wetland'],
-        price: '$1,800',
       },
       {
         id: 'ug-5',
@@ -113,7 +108,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'The ultimate Uganda experience covering gorillas, chimps, and savanna wildlife.',
         image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&h=400&fit=crop',
         highlights: ['Gorillas', 'Chimpanzees', 'Big Five', 'Cultural Tours'],
-        price: '$5,500',
       },
       {
         id: 'ug-6',
@@ -122,7 +116,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Explore one of Africa\'s most diverse parks with tree-climbing lions and hippos.',
         image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop',
         highlights: ['Kazinga Channel', 'Ishasha Lions', 'Crater Lakes'],
-        price: '$2,800',
       },
     ],
     activities: [
@@ -271,7 +264,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Trek through the Virunga volcanoes to meet Rwanda\'s famous mountain gorillas.',
         image: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=600&h=400&fit=crop',
         highlights: ['Gorilla Trekking', 'Volcanoes NP', 'Kigali City Tour'],
-        price: '$3,500',
       },
       {
         id: 'rw-2',
@@ -280,7 +272,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Experience gorillas, chimps, and Big Five game drives in one incredible trip.',
         image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&h=400&fit=crop',
         highlights: ['Gorillas', 'Chimpanzees', 'Akagera Safari'],
-        price: '$5,200',
       },
       {
         id: 'rw-3',
@@ -289,7 +280,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Discover Rwanda\'s only Big Five park with diverse savanna landscapes.',
         image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop',
         highlights: ['Big Five', 'Boat Safari', 'Bird Watching'],
-        price: '$1,200',
       },
       {
         id: 'rw-4',
@@ -298,7 +288,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Trek for chimpanzees and walk the famous canopy walkway.',
         image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&h=400&fit=crop',
         highlights: ['Chimp Trekking', 'Canopy Walk', 'Tea Plantations'],
-        price: '$1,800',
       },
       {
         id: 'rw-5',
@@ -307,7 +296,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Double primate adventure with golden monkeys and mountain gorillas.',
         image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&h=400&fit=crop',
         highlights: ['Gorilla Trek', 'Golden Monkeys', 'Volcano Hike'],
-        price: '$4,500',
       },
       {
         id: 'rw-6',
@@ -316,7 +304,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'The ultimate Rwanda journey from Kigali to Lake Kivu and beyond.',
         image: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=600&h=400&fit=crop',
         highlights: ['All Parks', 'Lake Kivu', 'Cultural Immersion'],
-        price: '$7,500',
       },
     ],
     activities: [
@@ -465,7 +452,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Experience the world-famous Masai Mara and witness incredible wildlife.',
         image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop',
         highlights: ['Big Five', 'Great Migration', 'Maasai Culture'],
-        price: '$2,800',
       },
       {
         id: 'ke-2',
@@ -474,7 +460,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'From Amboseli to Masai Mara - Kenya\'s best parks in one journey.',
         image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&h=400&fit=crop',
         highlights: ['Amboseli', 'Lake Nakuru', 'Masai Mara'],
-        price: '$3,500',
       },
       {
         id: 'ke-3',
@@ -483,7 +468,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'See elephants against the backdrop of Mount Kilimanjaro.',
         image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&h=400&fit=crop',
         highlights: ['Elephant Herds', 'Kilimanjaro Views', 'Bird Watching'],
-        price: '$1,200',
       },
       {
         id: 'ke-4',
@@ -492,7 +476,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'The ultimate East African safari combining two iconic destinations.',
         image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop',
         highlights: ['Serengeti', 'Masai Mara', 'Ngorongoro'],
-        price: '$6,500',
       },
       {
         id: 'ke-5',
@@ -501,7 +484,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Combine bush adventures with relaxation on Kenya\'s beautiful coast.',
         image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&h=400&fit=crop',
         highlights: ['Masai Mara', 'Diani Beach', 'Mombasa'],
-        price: '$4,200',
       },
       {
         id: 'ke-6',
@@ -510,7 +492,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Flamingos, rhinos, and dramatic volcanic landscapes.',
         image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&h=400&fit=crop',
         highlights: ['Flamingos', 'Rhinos', 'Cycling Safari'],
-        price: '$1,500',
       },
     ],
     activities: [
@@ -659,7 +640,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Experience the legendary Serengeti and its incredible wildlife.',
         image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&h=400&fit=crop',
         highlights: ['Great Migration', 'Big Five', 'Ngorongoro Crater'],
-        price: '$3,200',
       },
       {
         id: 'tz-2',
@@ -668,7 +648,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Tanzania\'s classic northern circuit covering all major parks.',
         image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop',
         highlights: ['Serengeti', 'Ngorongoro', 'Tarangire', 'Lake Manyara'],
-        price: '$4,500',
       },
       {
         id: 'tz-3',
@@ -677,7 +656,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Explore the world\'s largest intact volcanic caldera.',
         image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&h=400&fit=crop',
         highlights: ['Crater Safari', 'Big Five', 'Maasai Village'],
-        price: '$1,500',
       },
       {
         id: 'tz-4',
@@ -686,7 +664,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Combine bush safari with tropical island paradise.',
         image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=400&fit=crop',
         highlights: ['Serengeti', 'Zanzibar Beaches', 'Stone Town'],
-        price: '$5,000',
       },
       {
         id: 'tz-5',
@@ -695,7 +672,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Climb Africa\'s highest peak via the Marangu route.',
         image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&h=400&fit=crop',
         highlights: ['Summit Attempt', 'Marangu Route', 'Glaciers'],
-        price: '$2,800',
       },
       {
         id: 'tz-6',
@@ -704,7 +680,6 @@ export const countryData: Record<string, CountryData> = {
         description: 'Giant elephant herds and tree-climbing lions.',
         image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&h=400&fit=crop',
         highlights: ['Elephant Herds', 'Baobab Trees', 'Flamingos'],
-        price: '$1,800',
       },
     ],
     activities: [

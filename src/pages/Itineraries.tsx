@@ -66,10 +66,7 @@ const Itineraries = () => {
                       </div>
                     </div>
 
-                    {/* Price & CTA */}
                     <div className="lg:text-right lg:min-w-[180px]">
-                      <p className="text-sm text-muted-foreground mb-1">Starting from</p>
-                      <p className="text-accent font-heading text-3xl font-bold mb-4">{tour.price}</p>
                       <Link to={`/tour/${tour.slug}`}>
                         <Button variant="brand" size="lg" className="group/btn w-full lg:w-auto">
                           View Details

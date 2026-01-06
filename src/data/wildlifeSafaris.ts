@@ -16,7 +16,6 @@ export const wildlifeSafarisData: CategoryData = {
       description: 'Experience Rwanda\'s Big Five in a single carefully planned day. Akagera is Rwanda\'s only savannah reserve, famous for its wide plains and successful wildlife restoration.',
       image: 'https://images.unsplash.com/photo-1504173010664-32509aeebb62?w=800&h=600&fit=crop',
       highlights: ['Big Five wildlife experience', 'Scenic countryside drive', 'Picnic lunch in park'],
-      price: 'Available on request',
     },
     {
       id: '2-days-akagera',
@@ -25,7 +24,6 @@ export const wildlifeSafarisData: CategoryData = {
       description: 'One of Rwanda\'s most rewarding short wildlife adventures. Experience the Big Five with sunset boat safari on Lake Ihema and full-day game drives.',
       image: 'https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&h=600&fit=crop',
       highlights: ['Big Five viewing', 'Sunset boat safari', 'Full-day game drive'],
-      price: 'Available on request',
     },
     {
       id: '7-day-rwanda-classic',
@@ -34,7 +32,6 @@ export const wildlifeSafarisData: CategoryData = {
       description: 'Our top recommended safari combining Rwanda\'s stunning landscapes, extraordinary wildlife, and rich cultural heritage from Nyungwe to Volcanoes National Park.',
       image: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=800&h=600&fit=crop',
       highlights: ['Chimpanzee trekking', 'Gorilla trekking', 'Lake Kivu relaxation'],
-      price: 'Available on request',
     },
   ],
 };

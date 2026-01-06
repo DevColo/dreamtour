@@ -123,11 +123,7 @@ const CategoryPage = ({ data }: CategoryPageProps) => {
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                    <div>
-                      <p className="text-xs text-muted-foreground">From</p>
-                      <p className="text-xl font-heading font-bold text-accent">{itinerary.price}</p>
-                    </div>
+                  <div className="flex items-center justify-end pt-4 border-t border-border/50">
                     <Button variant="brand" size="sm">
                       View Itinerary
                     </Button>

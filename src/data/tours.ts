@@ -5,15 +5,14 @@ export interface Tour {
   duration: string;
   groupSize: string;
   difficulty: 'Easy' | 'Moderate' | 'Challenging';
-  price: string; // Kept in data but not displayed in UI
   description: string;
   bannerImage: string;
   galleryImages: string[];
   highlights: string[];
   included: string[];
-  excluded?: string[]; // New field
-  customization?: string[]; // New field
-  whySpecial?: string; // New field
+  excluded?: string[];
+  customization?: string[];
+  whySpecial?: string;
   itinerary: { day: number; title: string; description: string; image?: string }[];
 }
 
@@ -25,7 +24,6 @@ export const tours: Tour[] = [
     duration: '1 Day',
     groupSize: '2-8 People',
     difficulty: 'Easy',
-    price: 'Available on request',
     
     description: `Escape the city and immerse yourself in the tranquil beauty of Lake Kivu with this 1-day Karongi tour. Perfect for travelers looking for relaxation, scenic landscapes, and a touch of Rwanda's rich history, this trip combines picturesque lakeside views with cultural stories and natural wonders. Explore Rwanda's rolling hills, discover the famous Ndaba Rock & Waterfall, and hear the emotional story of the Nyange Students, a symbol of courage and unity during the 1994 genocide against the Tutsi. End your day soaking in the peaceful atmosphere along one of Africa's most scenic lakes.`,
     bannerImage: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=1920&h=800&fit=crop',
@@ -82,7 +80,6 @@ export const tours: Tour[] = [
     duration: '2 Days / 1 Night',
     groupSize: '2-6 People',
     difficulty: 'Moderate',
-    price: 'Available on request',
     description: 'This 2 Days Chimpanzee Trekking Safari introduces you to the heart of Nyungwe National Park, one of Africa\'s oldest surviving rainforests and Rwanda\'s top destination for primate encounters. Known for its thriving chimpanzee communities, lush green canopy, rare bird species, and refreshing highland climate.',
     bannerImage: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=1920&h=800&fit=crop',
     galleryImages: [
@@ -150,7 +147,6 @@ export const tours: Tour[] = [
     duration: '2 Days / 1 Night',
     groupSize: '2-6 People',
     difficulty: 'Easy',
-    price: 'Available on request',
     description: 'The 2 Days Akagera National Park Safari is one of Rwanda\'s most rewarding short wildlife adventures, ideal for travelers who want to experience the Big Five without long travel days. Akagera is Rwanda\'s only savannah reserve and a remarkable conservation success story.',
     bannerImage: 'https://images.unsplash.com/photo-1504173010664-32509aeebb62?w=1920&h=800&fit=crop',
     galleryImages: [
@@ -219,7 +215,6 @@ export const tours: Tour[] = [
     duration: '3 Days / 2 Nights',
     groupSize: '2-8 People',
     difficulty: 'Challenging',
-    price: 'Available on request',
     description: 'Embark on a 3 Days Gorilla Trekking Safari exploring the legendary Virunga Mountains and Rwanda\'s renowned Volcanoes National Park. This safari combines wildlife, culture, history, and conservation into one immersive experience, featuring endangered mountain gorillas and Dian Fossey\'s conservation legacy.',
     bannerImage: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=1920&h=800&fit=crop',
     galleryImages: [
@@ -297,7 +292,6 @@ export const tours: Tour[] = [
     duration: '3 Days / 2 Nights',
     groupSize: '2-6 People',
     difficulty: 'Easy',
-    price: 'Available on request',
     description: 'The 3 Days Lake Kivu - Karongi Tour is a peaceful escape designed for travelers who want to slow down and experience Rwanda\'s most scenic lakeside destination. This journey blends breathtaking landscapes, meaningful cultural history, and calming nature moments in Karongi (formerly Kibuye).',
     bannerImage: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=800&fit=crop',
     galleryImages: [
@@ -370,7 +364,6 @@ export const tours: Tour[] = [
     duration: '7 Days / 6 Nights',
     groupSize: '2-8 People',
     difficulty: 'Moderate',
-    price: 'Available on request',
     description: 'The 7 Days Rwanda Classic Adventure is Dream Destination Tours and Travel\'s top recommended safari, specially crafted for travelers eager to experience Rwanda\'s stunning landscapes, extraordinary wildlife, and rich cultural heritage. From the misty rainforests of Nyungwe National Park to the majestic Volcanoes National Park, and the serene shores of Lake Kivu to the vibrant streets of Kigali, this safari showcases Rwanda\'s diversity in one seamless journey. Trek chimpanzees, stroll along the famous Nyungwe Canopy Walk, enjoy lakeside tranquility, encounter mountain gorillas, meet playful golden monkeys, and explore the Ellen DeGeneres Campus of the Dian Fossey Gorilla Fund.',
     bannerImage: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=1920&h=800&fit=crop',
     galleryImages: [
@@ -465,7 +458,6 @@ export const tours: Tour[] = [
   duration: '1 Day',
   groupSize: '2-6 People',
   difficulty: 'Easy',
-  price: 'Available on request',
   description: 'This 1 Day Akagera National Park Safari from Kigali is a perfect choice for travelers who want to experience Rwanda\'s Big Five in a single, carefully planned day. Akagera National Park is Rwanda\'s only savannah reserve, famous for its wide plains, lakes, rolling hills, and one of Africa\'s most successful wildlife restoration stories.',
   bannerImage: 'https://images.unsplash.com/photo-1504173010664-32509aeebb62?w=1920&h=800&fit=crop',
   galleryImages: [
@@ -525,7 +517,6 @@ export const tours: Tour[] = [
   duration: '1 Day',
   groupSize: '2-8 People',
   difficulty: 'Challenging',
-  price: 'Available on request',
   description: 'The 1 Day Gorilla Trekking Tour from Kigali with Dream Destination Tours & Travel is designed for travelers who want Rwanda\'s most iconic wildlife experience in just a single day. Departing early from Kigali, this tour takes you to the legendary Virunga Mountains, home to endangered mountain gorillas, and introduces you to Rwanda\'s inspiring conservation story pioneered by Dr. Dian Fossey.',
   bannerImage: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=1920&h=800&fit=crop',
   galleryImages: [
@@ -585,7 +576,6 @@ export const tours: Tour[] = [
   duration: '1 Day',
   groupSize: '2-6 People',
   difficulty: 'Moderate',
-  price: 'Available on request',
   description: 'The 1 Day Nyungwe National Park Tour with Dream Destination Tours & Travel is a perfect blend of culture, nature, and adventure, designed for travelers who want to experience Rwanda\'s highlights in a single rewarding day. Ideal as a Kigali day trip, this journey takes you through Rwanda\'s southern landscapes to the iconic Nyanza King\'s Palace Museum and deep into Nyungwe National Park, one of Africa\'s oldest and most biologically rich rainforests.',
   bannerImage: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=1920&h=800&fit=crop',
   galleryImages: [
@@ -645,7 +635,6 @@ export const tours: Tour[] = [
   duration: '4 Days / 3 Nights',
   groupSize: '2-8 People',
   difficulty: 'Challenging',
-  price: 'Available on request',
   description: 'This 4 Days Volcanoes National Park Safari is a carefully designed Rwanda experience that brings together three of the country\'s most celebrated highlights: mountain gorilla trekking, golden monkey tracking, and relaxation at the scenic shores of Lake Kivu. Journey through the iconic Virunga Mountains, encounter rare primates found nowhere else on Earth, and unwind beside one of Africa\'s most peaceful freshwater lakes.',
   bannerImage: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=1920&h=800&fit=crop',
   galleryImages: [
@@ -726,7 +715,6 @@ export const tours: Tour[] = [
   duration: '5 Days / 4 Nights',
   groupSize: '2-8 People',
   difficulty: 'Moderate',
-  price: 'Available on request',
   description: 'The 5 Days Best of Rwanda Safari with Dream Destination Tours & Travel is the ultimate introduction to Rwanda, offering a curated loop through the country\'s top highlights. Witness the Big Five in Akagera National Park, trek with endangered mountain gorillas in Volcanoes National Park, and explore Kigali\'s rich culture and history.',
   bannerImage: 'https://images.unsplash.com/photo-1504173010664-32509aeebb62?w=1920&h=800&fit=crop',
   galleryImages: [
@@ -813,7 +801,6 @@ export const tours: Tour[] = [
   duration: '10 Days / 9 Nights',
   groupSize: '2-8 People',
   difficulty: 'Moderate',
-  price: 'Available on request',
   description: 'The 10 Days Prime Rwanda Safari with Dream Destination Tours & Travel is the ultimate Rwanda experience, designed for travelers who want to explore the country\'s wildlife, primates, lakes, and culture in a seamless loop. From Kigali to Akagera, Nyungwe, Lake Kivu, and Volcanoes Mountains, this itinerary showcases Rwanda\'s most iconic destinations.',
   bannerImage: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=1920&h=800&fit=crop',
   galleryImages: [
