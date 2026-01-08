@@ -21,7 +21,7 @@ const socialLinks = [
   { icon: Facebook, href: '#', label: 'Facebook' },
   { icon: Instagram, href: '#', label: 'Instagram' },
   { icon: Twitter, href: '#', label: 'X' },
-  { icon: MessageCircle, href: 'https://wa.me/250780714871', label: 'WhatsApp' },
+  { icon: MessageCircle, href: 'https://wa.me/250788328237', label: 'WhatsApp' },
 ];
 
 export const Footer = () => {

@@ -54,8 +54,8 @@ const Contact = () => {
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      content: '+250 780 714 871',
-      href: 'https://wa.me/250780714871',
+      content: '+250 788 328 237',
+      href: 'https://wa.me/250788328237',
     },
     {
       icon: MapPin,
