@@ -5,25 +5,25 @@ const reasons = [
     icon: Award,
     title: 'Professional Guides',
     description: 'Expert local guides with deep knowledge of wildlife, culture, and terrain.',
-    image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=400&h=300&fit=crop',
+    image: 'https://media.istockphoto.com/id/1459013777/photo/two-friends-taking-pictures-in-nature.webp?a=1&b=1&s=612x612&w=0&k=20&c=AOz6T1Z4d8qSIhw3e3AN-C6CbJvRJ5xTpuCdc9OAyfA=',
   },
   {
     icon: MapPin,
     title: 'Tailor-Made Itineraries',
     description: 'Custom trips designed around your interests, pace, and travel style.',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJpcHxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     icon: Heart,
     title: 'Affordable Packages',
     description: 'Premium experiences at competitive rates with transparent pricing.',
-    image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1607526163467-d7c344a83f7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRvdXJzfGVufDB8fDB8fHww',
   },
   {
     icon: Shield,
     title: 'Safe & Certified',
     description: 'Fully licensed tour operator with comprehensive insurance coverage.',
-    image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=400&h=300&fit=crop',
+    image: 'https://plus.unsplash.com/premium_photo-1677529102407-0d075eb2cbb9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2FmZXR5fGVufDB8fDB8fHww',
   },
 ];
 

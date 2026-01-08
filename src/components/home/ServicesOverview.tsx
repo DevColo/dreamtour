@@ -8,7 +8,7 @@ const services = [
     title: 'Wildlife Safaris',
     subtitle: 'East Africa (EAC)',
     description: 'Witness the Big Five and the Great Migration across Kenya, Tanzania, Uganda, and Rwanda.',
-    image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600158362217-37e9db30b17a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlnJTIwZml2ZXxlbnwwfHwwfHx8MA%3D%3D',
     link: '/services/wildlife-safaris',
   },
   {
@@ -16,7 +16,7 @@ const services = [
     title: 'Primate Tracking',
     subtitle: 'Rwanda & Uganda',
     description: 'Get up close with mountain gorillas and chimpanzees in their natural rainforest habitats.',
-    image: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=600&h=400&fit=crop',
+    image: 'https://plus.unsplash.com/premium_photo-1661844600175-f1a53a43594d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNoZW1wYW56ZWV8ZW58MHx8MHx8fDA%3D',
     link: '/services/primate-tracking',
   },
   {
@@ -24,7 +24,7 @@ const services = [
     title: 'Cultural Tours',
     subtitle: 'Community Experiences',
     description: 'Immerse yourself in local traditions, village visits, and authentic African cultural experiences.',
-    image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1605302596032-15e67c3cf66a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWZyaWNhbiUyMGN1bHR1cmV8ZW58MHx8MHx8fDA%3D',
     link: '/services/cultural-tours',
   },
   {

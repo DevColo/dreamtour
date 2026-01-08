@@ -246,7 +246,7 @@ export const countryData: Record<string, CountryData> = {
     slug: 'rwanda',
     name: 'Rwanda',
     tagline: 'Land of a Thousand Hills',
-    heroImage: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=1920&h=1080&fit=crop',
+    heroImage: 'https://plus.unsplash.com/premium_photo-1661955494685-3e49300391a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cndhbmRhJTIwaGlsbHN8ZW58MHx8MHx8fDA%3D',
     overview: {
       title: 'Discover Rwanda - Land of a Thousand Hills',
       description: 'Rwanda is a country of extraordinary beauty, where mist-covered volcanoes shelter endangered mountain gorillas and lush rainforests echo with the calls of chimpanzees. Modern, safe, and welcoming, Rwanda offers an unparalleled safari experience.',
