@@ -11,42 +11,42 @@ const team = [
     role: 'Founder & CEO',
     bio: 'With over 20 years in the travel industry, David founded Dream Destinations to share his passion for African wildlife and culture.',
     avatar: 'DH',
-    imageId: '1560250097-0b93528c311a',
+    image: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=600&auto=format&fit=crop&q=60',
   },
   {
     name: 'Sarah Uwimana',
     role: 'Head of Operations',
     bio: 'Sarah ensures every safari runs smoothly, bringing 15 years of logistics expertise to create seamless travel experiences.',
     avatar: 'SU',
-    imageId: '1573496359142-b8d87734a5a2',
+    image: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJsYWNrJTIwd29tYW58ZW58MHx8MHx8fDA%3D',
   },
   {
     name: 'Jean Pierre Mugabo',
     role: 'Lead Safari Guide',
     bio: 'Having explored every corner of East Africa, Jean Pierre crafts personalized safari experiences that exceed expectations.',
     avatar: 'JPM',
-    imageId: '1507003211169-0a1dd7228f2d',
+    image: 'https://images.unsplash.com/photo-1614890085618-0e1054da74f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBtYW58ZW58MHx8MHx8fDA%3D',
   },
   {
     name: 'Grace Ingabire',
     role: 'Gorilla Trekking Specialist',
     bio: 'Born in Rwanda near the Volcanoes National Park, Grace has an unmatched connection with gorilla conservation.',
     avatar: 'GI',
-    imageId: '1580489944761-15a19d654956',
+    image: 'https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     name: 'Emmanuel Ndayisaba',
     role: 'Wildlife Expert - Uganda',
     bio: 'A native of Uganda, Emmanuel has guided hundreds of safaris across Queen Elizabeth and Murchison Falls parks.',
     avatar: 'EN',
-    imageId: '1506794778202-cad84cf45f1d',
+    image: 'https://images.unsplash.com/photo-1546525848-3ce03ca516f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjBtYW58ZW58MHx8MHx8fDA%3D',
   },
   {
     name: 'Amina Keza',
     role: 'Cultural Experience Coordinator',
     bio: 'Amina specializes in authentic cultural experiences, connecting travelers with local communities across East Africa.',
     avatar: 'AK',
-    imageId: '1598550874175-4d0ef436c909',
+    image: 'https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D',
   },
 ];
 
@@ -76,7 +76,7 @@ const MeetTheTeam = () => {
                 <div 
                   className="absolute inset-0 bg-gradient-to-br from-primary to-secondary"
                   style={{
-                    backgroundImage: `url(https://images.unsplash.com/photo-${member.imageId}?w=600&h=800&fit=crop&crop=face)`,
+                    backgroundImage: `url(${member.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center top',
                   }}
@@ -95,12 +95,7 @@ const MeetTheTeam = () => {
                     <div className="transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
                       <p className="text-white/90 text-sm leading-relaxed mb-4">{member.bio}</p>
                       <div className="flex items-center gap-3">
-                        <button className="w-10 h-10 rounded-full bg-white/20 hover:bg-secondary flex items-center justify-center transition-colors backdrop-blur-sm">
-                          <Linkedin className="w-4 h-4 text-white" />
-                        </button>
-                        <button className="w-10 h-10 rounded-full bg-white/20 hover:bg-secondary flex items-center justify-center transition-colors backdrop-blur-sm">
-                          <Mail className="w-4 h-4 text-white" />
-                        </button>
+                        
                       </div>
                     </div>
                   </div>
