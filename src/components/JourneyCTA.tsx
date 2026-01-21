@@ -16,14 +16,12 @@ export const JourneyCTA = () => {
           </p>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground mb-6 leading-tight">
-            Your Journey Adventure
-            <span className="block">Begins Here</span>
+            Start Your East Africa Safari
+            <span className="block">Adventure Here Today!</span>
           </h2>
 
           <p className="text-primary-foreground/90 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-            Ready to explore the wonders of Africa? Let us help you plan the perfect safari adventure. 
-            From gorilla trekking in the misty mountains to the endless plains of the Serengeti, 
-            your dream journey awaits.
+            Explore Rwanda, Uganda, Kenya, and Tanzania with Dream Destination Safaris. From thrilling Big Five safaris to iconic landscapes and cultural experiences, we create custom East Africa safari tours designed for unforgettable wildlife adventures.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

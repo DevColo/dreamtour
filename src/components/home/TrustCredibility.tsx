@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { Handshake } from 'lucide-react';
+import { Handshake, X, Download } from 'lucide-react';
 import rdbLicense from '@/assets/Dream TOL.jpg';
 import rttaMembership from '@/assets/DDTT RTTA membership (1).jpg';
 import serenaLogo from '@/assets/serena.png';
@@ -60,6 +60,7 @@ const partnerHotels = [
 export const TrustCredibility = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [selectedCertificate, setSelectedCertificate] = useState<{ image: string; title: string } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const scroll = useCallback(() => {
@@ -88,6 +89,15 @@ export const TrustCredibility = () => {
     }
   }, [scrollPosition]);
 
+  const handleDownload = (image: string, title: string) => {
+    const link = document.createElement('a');
+    link.href = image;
+    link.download = `${title}.jpg`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="py-24 bg-card">
       <div className="container mx-auto px-4">
@@ -97,11 +107,10 @@ export const TrustCredibility = () => {
             Trust & Credibility
           </p>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Your Journey in <span className="text-primary">Safe Hands</span>
+            Your Journey in <span className="text-primary">Safe Hands with Dream Destination Tours and Travel</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            We partner with world-class hotels and hold official certifications 
-            to ensure your African adventure is safe, comfortable, and unforgettable.
+            Travel with confidence with Dream Destination Tours and Travel, fully licensed and partnered with world-class accommodations, offering safe, seamless, and unforgettable safari experiences across Rwanda, Uganda, Kenya, and Tanzania.
           </p>
         </div>
 
@@ -110,14 +119,20 @@ export const TrustCredibility = () => {
           {certificates.map((cert) => (
             <div
               key={cert.title}
-              className="bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+              onClick={() => setSelectedCertificate(cert)}
+              className="bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-muted/20 flex items-center justify-center p-4">
+              <div className="aspect-[4/3] overflow-hidden bg-muted/20 flex items-center justify-center p-4 relative">
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                  <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Click to view
+                  </span>
+                </div>
               </div>
               <div className="px-4 py-3 text-center bg-card">
                 <h3 className="font-heading font-medium text-foreground text-sm">
@@ -127,6 +142,47 @@ export const TrustCredibility = () => {
             </div>
           ))}
         </div>
+
+        {/* Certificate Preview Modal */}
+        {selectedCertificate && (
+          <div 
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedCertificate(null)}
+          >
+            <div 
+              className="relative max-w-4xl w-full bg-card rounded-lg overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between p-4 border-b border-border">
+                <h3 className="font-heading font-semibold text-lg text-foreground">
+                  {selectedCertificate.title}
+                </h3>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => handleDownload(selectedCertificate.image, selectedCertificate.title)}
+                    className="p-2 hover:bg-muted rounded-lg transition-colors"
+                    title="Download"
+                  >
+                    <Download className="w-5 h-5 text-foreground" />
+                  </button>
+                  <button
+                    onClick={() => setSelectedCertificate(null)}
+                    className="p-2 hover:bg-muted rounded-lg transition-colors"
+                  >
+                    <X className="w-5 h-5 text-foreground" />
+                  </button>
+                </div>
+              </div>
+              <div className="p-4 max-h-[80vh] overflow-auto">
+                <img
+                  src={selectedCertificate.image}
+                  alt={selectedCertificate.title}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Partner Hotels Section */}
         <div className="bg-primary rounded-3xl p-8 md:p-12 relative overflow-hidden">

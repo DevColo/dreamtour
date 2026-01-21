@@ -7,7 +7,7 @@ const services = [
     icon: Compass,
     title: 'Wildlife Safaris',
     subtitle: 'East Africa (EAC)',
-    description: 'Witness the Big Five and the Great Migration across Kenya, Tanzania, Uganda, and Rwanda.',
+    description: 'Rwanda Big Five Safaris & East Africa Great Migration Tours. Journey through Rwanda\'s top wildlife parks and chase the Great Migration across Kenya and Tanzania for an unforgettable African adventure.',
     image: 'https://images.unsplash.com/photo-1600158362217-37e9db30b17a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlnJTIwZml2ZXxlbnwwfHwwfHx8MA%3D%3D',
     link: '/services/wildlife-safaris',
   },
@@ -15,7 +15,7 @@ const services = [
     icon: TreePine,
     title: 'Primate Tracking',
     subtitle: 'Rwanda & Uganda',
-    description: 'Get up close with mountain gorillas and chimpanzees in their natural rainforest habitats.',
+    description: 'Rwanda & Uganda Gorilla and Chimpanzee Tracking Tours. Explore pristine rainforests and experience East Africa\'s most sought-after primate adventures with top-rated gorilla trekking and chimpanzee tracking in Rwanda and Uganda..',
     image: 'https://plus.unsplash.com/premium_photo-1661844600175-f1a53a43594d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNoZW1wYW56ZWV8ZW58MHx8MHx8fDA%3D',
     link: '/services/primate-tracking',
   },
@@ -23,7 +23,8 @@ const services = [
     icon: Users,
     title: 'Cultural Tours',
     subtitle: 'Community Experiences',
-    description: 'Immerse yourself in local traditions, village visits, and authentic African cultural experiences.',
+    description: 'East Africa Community & Cultural Tours — Rwanda, Uganda, Maasai Kenya & Tanzania Discover real African traditions through village visits, Maasai cultural encounters, storytelling, and sustainable community-based tourism experiences.',
+
     image: 'https://images.unsplash.com/photo-1605302596032-15e67c3cf66a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWZyaWNhbiUyMGN1bHR1cmV8ZW58MHx8MHx8fDA%3D',
     link: '/services/cultural-tours',
   },
@@ -31,7 +32,7 @@ const services = [
     icon: Calendar,
     title: 'Multi-Day Tours',
     subtitle: 'Extended Adventures',
-    description: 'Comprehensive safari packages from 3 to 21 days, covering multiple destinations and experiences.',
+    description: 'Top-Rated Multi-Day Safari Packages in Rwanda & East Africa. From 3-day escapes to 21-day expeditions, explore East Africa’s top destinations with customized long-safari itineraries across Rwanda, Uganda, Kenya, and Tanzania for the ultimate wildlife and cultural journey.',
     image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop',
     link: '/services/multi-day-tours',
   },
@@ -47,11 +48,10 @@ export const ServicesOverview = () => {
             Our Services
           </p>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Unforgettable <span className="text-primary">African Adventures</span>
+            East Africa Safari Experts, <span className="text-primary">Rwanda Gorilla Trekking & Big Five Tours</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            From thrilling wildlife safaris to intimate primate encounters, 
-            discover the diverse experiences we offer across East Africa.
+            Discover unforgettable African adventures across Rwanda, Uganda, Kenya, and Tanzania featuring gorilla trekking, wildlife safaris, cultural tours, and tailor-made travel experiences.
           </p>
         </div>
 

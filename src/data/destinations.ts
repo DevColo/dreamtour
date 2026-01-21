@@ -11,6 +11,29 @@ export interface Destination {
 }
 
 export const destinations: Destination[] = [
+  
+  {
+    slug: 'rwanda',
+    name: 'Rwanda',
+    tagline: 'Land of a Thousand Hills',
+    description: 'Embark on a unique adventure and discover the magic of Rwanda\'s wildlife and culture. This remarkable country offers intimate gorilla encounters, stunning volcanic landscapes, and a rich cultural heritage that will leave you transformed.',
+    highlights: [
+      'Gorilla Trekking',
+      'Golden Monkey Tracking',
+      'Volcanoes National Park',
+      'Lake Kivu Relaxation',
+      'Kigali City Tours',
+    ],
+    parks: [
+      { name: 'Volcanoes National Park', slug: 'volcanoes-national-park', description: 'Iconic home of mountain gorillas' },
+      { name: 'Akagera National Park', slug: 'akagera-national-park', description: 'Rwanda\'s only Big Five destination' },
+      { name: 'Nyungwe Forest', slug: 'nyungwe-forest', description: 'Ancient rainforest with chimpanzees and canopy walks' },
+    ],
+    bestTime: 'June to September, December to February',
+    currency: 'Rwandan Franc (RWF)',
+    language: 'Kinyarwanda, English, French',
+  },
+
   {
     slug: 'uganda',
     name: 'Uganda',
@@ -33,27 +56,7 @@ export const destinations: Destination[] = [
     currency: 'Ugandan Shilling (UGX)',
     language: 'English, Swahili',
   },
-  {
-    slug: 'rwanda',
-    name: 'Rwanda',
-    tagline: 'Land of a Thousand Hills',
-    description: 'Embark on a unique adventure and discover the magic of Rwanda\'s wildlife and culture. This remarkable country offers intimate gorilla encounters, stunning volcanic landscapes, and a rich cultural heritage that will leave you transformed.',
-    highlights: [
-      'Gorilla Trekking',
-      'Golden Monkey Tracking',
-      'Volcanoes National Park',
-      'Lake Kivu Relaxation',
-      'Kigali City Tours',
-    ],
-    parks: [
-      { name: 'Volcanoes National Park', slug: 'volcanoes-national-park', description: 'Iconic home of mountain gorillas' },
-      { name: 'Akagera National Park', slug: 'akagera-national-park', description: 'Rwanda\'s only Big Five destination' },
-      { name: 'Nyungwe Forest', slug: 'nyungwe-forest', description: 'Ancient rainforest with chimpanzees and canopy walks' },
-    ],
-    bestTime: 'June to September, December to February',
-    currency: 'Rwandan Franc (RWF)',
-    language: 'Kinyarwanda, English, French',
-  },
+  
   {
     slug: 'kenya',
     name: 'Kenya',

@@ -18,8 +18,8 @@ const navItems = [
     label: 'Destinations', 
     href: '#',
     children: [
-      { label: 'Uganda', href: '/destinations/uganda' },
       { label: 'Rwanda', href: '/destinations/rwanda' },
+      { label: 'Uganda', href: '/destinations/uganda' },
       { label: 'Kenya', href: '/destinations/kenya' },
       { label: 'Tanzania', href: '/destinations/tanzania' },
     ]

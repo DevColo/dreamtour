@@ -14,6 +14,10 @@ export interface CategoryData {
   overviewDescription: string;
   experienceTitle: string;
   experienceDescription: string;
+  availableToursTitle?: string;
+  availableToursDescription?: string;
+  ctaTitle?: string;
+  ctaDescription?: string;
 }
 
 interface CategoryPageProps {
@@ -76,11 +80,10 @@ const CategoryPage = ({ data }: CategoryPageProps) => {
               Available Tours
             </p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              {data.title} <span className="text-primary">Itineraries</span>
+              {data.availableToursTitle || `${data.title} Itineraries`}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our carefully crafted itineraries designed to showcase the best experiences.
-              Each can be customized to match your preferences.
+              {data.availableToursDescription || 'Explore our carefully crafted itineraries designed to showcase the best experiences. Each can be customized to match your preferences.'}
             </p>
           </div>
 
@@ -149,10 +152,10 @@ const CategoryPage = ({ data }: CategoryPageProps) => {
       <section className="py-20 bg-gradient-to-br from-primary to-secondary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-6">
-            Ready to Start Your Adventure?
+            {data.ctaTitle || 'Ready to Start Your Adventure?'}
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Let us craft your perfect {data.title.toLowerCase()} experience with our expert local guides.
+            {data.ctaDescription || `Let us craft your perfect ${data.title.toLowerCase()} experience with our expert local guides.`}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/itineraries">

@@ -7,46 +7,32 @@ import { Link } from 'react-router-dom';
 
 const team = [
   {
-    name: 'David Habimana',
+    name: 'Samuel IMANIRAVUGA',
     role: 'Founder & CEO',
     bio: 'With over 20 years in the travel industry, David founded Dream Destinations to share his passion for African wildlife and culture.',
-    avatar: 'DH',
+    avatar: 'SI',
     image: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=600&auto=format&fit=crop&q=60',
   },
   {
-    name: 'Sarah Uwimana',
-    role: 'Head of Operations',
-    bio: 'Sarah ensures every safari runs smoothly, bringing 15 years of logistics expertise to create seamless travel experiences.',
-    avatar: 'SU',
-    image: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJsYWNrJTIwd29tYW58ZW58MHx8MHx8fDA%3D',
-  },
-  {
-    name: 'Jean Pierre Mugabo',
-    role: 'Lead Safari Guide',
-    bio: 'Having explored every corner of East Africa, Jean Pierre crafts personalized safari experiences that exceed expectations.',
-    avatar: 'JPM',
+    name: 'Joel NIYIGABA',
+    role: 'Professional Wildlife Safari Tour Guide',
+    bio: 'Joel ensures every safari runs smoothly, bringing 15 years of logistics expertise to create seamless travel experiences.',
+    avatar: 'JN',
     image: 'https://images.unsplash.com/photo-1614890085618-0e1054da74f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBtYW58ZW58MHx8MHx8fDA%3D',
   },
   {
-    name: 'Grace Ingabire',
-    role: 'Gorilla Trekking Specialist',
-    bio: 'Born in Rwanda near the Volcanoes National Park, Grace has an unmatched connection with gorilla conservation.',
-    avatar: 'GI',
-    image: 'https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D',
-  },
-  {
-    name: 'Emmanuel Ndayisaba',
-    role: 'Wildlife Expert - Uganda',
-    bio: 'A native of Uganda, Emmanuel has guided hundreds of safaris across Queen Elizabeth and Murchison Falls parks.',
-    avatar: 'EN',
+    name: 'TUMUSIFU Theogene',
+    role: 'Head of Operations',
+    bio: 'Theogene ensures every safari runs smoothly, bringing 15 years of logistics expertise to create seamless travel experiences.',
+    avatar: 'TT',
     image: 'https://images.unsplash.com/photo-1546525848-3ce03ca516f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjBtYW58ZW58MHx8MHx8fDA%3D',
   },
   {
-    name: 'Amina Keza',
-    role: 'Cultural Experience Coordinator',
-    bio: 'Amina specializes in authentic cultural experiences, connecting travelers with local communities across East Africa.',
-    avatar: 'AK',
-    image: 'https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D',
+    name: 'DUSABEYEZU Jeremy',
+    role: 'Professional Tourist Driver Guide',
+    bio: 'Jeremy specializes Professional Tourist Driver Guide, connecting travelers with local communities and different Destinations  across East Africa.',
+    avatar: 'DJ',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=60',
   },
 ];
 
@@ -113,7 +99,7 @@ const MeetTheTeam = () => {
             Join Our <span className="text-secondary">Team</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
-            Passionate about African wildlife and travel? We're always looking for talented individuals to join our growing team.
+            If you're passionate about Rwanda tourism, wildlife conservation, and East Africa travel, we'd love to have you on our team.
           </p>
           <Link to="/contact">
             <Button variant="brand" size="lg">

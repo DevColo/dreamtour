@@ -3,16 +3,16 @@ import { ArrowRight } from 'lucide-react';
 
 const destinations = [
   {
-    name: 'Uganda',
-    slug: 'uganda',
-    description: 'Encounter majestic mountain gorillas and experience the Pearl of Africa.',
-    image: 'https://plus.unsplash.com/premium_photo-1661843402797-d51337c5e42e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z29yaWxsYXxlbnwwfHwwfHx8MA%3D%3D',
-  },
-  {
     name: 'Rwanda',
     slug: 'rwanda',
     description: 'Discover the land of a thousand hills with incredible wildlife and culture.',
     image: 'https://plus.unsplash.com/premium_photo-1661955494685-3e49300391a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cndhbmRhJTIwaGlsbHN8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    name: 'Uganda',
+    slug: 'uganda',
+    description: 'Encounter majestic mountain gorillas and experience the Pearl of Africa.',
+    image: 'https://plus.unsplash.com/premium_photo-1661843402797-d51337c5e42e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z29yaWxsYXxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     name: 'Kenya',
@@ -41,8 +41,7 @@ export const Destinations = () => {
             Explore Our <span className="text-primary">Destinations</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Discover the magic of East Africa through our carefully curated destinations, 
-            each offering unique experiences and unforgettable memories.
+            Explore the heart of East Africa through our top destinations Rwanda, Uganda, Kenya, and Tanzania where breathtaking landscapes, rich wildlife, and authentic cultural encounters create truly unforgettable safari experiences.
           </p>
         </div>
 

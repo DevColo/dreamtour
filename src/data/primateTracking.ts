@@ -2,10 +2,14 @@ import { CategoryData } from '@/pages/services/CategoryPage';
 
 export const primateTrackingData: CategoryData = {
   slug: 'primate-tracking',
-  title: 'Primate Tracking',
+  title: 'Primate Tracking in Rwanda & Uganda',
   bannerImage: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=1920&h=1080&fit=crop',
-  overviewTitle: 'Primate Tracking in Rwanda & Uganda',
-  overviewDescription: 'Get up close with mountain gorillas and chimpanzees in their natural rainforest habitats. Experience unforgettable encounters with Africa\'s most iconic primates.',
+  overviewTitle: 'Our Primate Tracking Experience',
+  overviewDescription: 'Get up close with mountain gorillas and chimpanzees in their natural habitats. Trek the forests of Volcanoes National Park, Nyungwe National Park, Bwindi Impenetrable Forest, and Mgahinga National Park for unforgettable wildlife encounters. Book your gorilla and chimpanzee adventure with Dream Destination Tours & Travel today.',
   experienceTitle: 'Our Primate Tracking Experience',
-  experienceDescription: 'Discover the magic of primate encounters in Rwanda and Uganda\'s pristine rainforests. Trek through misty mountain slopes to meet endangered mountain gorillas in Volcanoes National Park, or venture into Nyungwe\'s ancient forests to observe chimpanzees and golden monkeys. Our expert guides ensure safe, respectful wildlife encounters while sharing insights into conservation efforts pioneered by Dr. Dian Fossey. We handle all permits, provide experienced trackers, and ensure comfortable transport and accommodations. Whether you\'re seeking the thrill of gorilla trekking or the playful energy of chimpanzees, we create meaningful primate experiences that support conservation and local communities across the region.',
+  experienceDescription: 'As a leading Gorilla Tour Operator, Dream Destination Tours & Travel organizes unforgettable gorilla and chimpanzee trekking tours across East Africa. Get up close with mountain gorillas, chimpanzees, and golden monkeys in their natural habitats.\n\nTrek the misty slopes of Volcanoes National Park for gorillas, explore Nyungwe Forest for chimpanzees and playful golden monkeys, or visit Bwindi and Mgahinga in Uganda for world-class gorilla adventures. With expert local guides, all permits arranged, comfortable transport, and accommodations included, we deliver safe, responsible, and authentic primate safari experiences that support conservation and local communities.',
+  availableToursTitle: 'Primate Tracking Itineraries in Rwanda & Uganda',
+  availableToursDescription: 'Explore our expertly crafted primate tracking itineraries, designed to showcase the best gorilla trekking and chimpanzee safari experiences in Rwanda and Uganda. Each itinerary is fully customizable to match your interests, ensuring unforgettable encounters with mountain gorillas, chimpanzees, and golden monkeys in their natural rainforest habitats.',
+  ctaTitle: 'Ready to Start Your Primate Adventure?',
+  ctaDescription: 'Let Dream Destination Tours & Travel craft your perfect Primate safari experience with expert local guides, unforgettable Experience, and tailor-made itineraries designed for every traveler.',
 };

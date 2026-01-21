@@ -80,10 +80,10 @@ export const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto animate-fade-up opacity-0 delay-300 font-light leading-relaxed">
-            Experience the magic of Africa with our expertly crafted safari adventures. 
-            From gorilla trekking to the great migration, we create unforgettable journeys.
-          </p>
+          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-4xl mx-auto animate-fade-up opacity-0 delay-300 font-light leading-relaxed">
+  Welcome to Dream Destinations Tours & Travel, a Rwanda-based tour operator with over 5 years of experience crafting exceptional journeys across Rwanda and the East African Community (EAC). Experience the magic of our region through expertly designed adventures from Gorilla Trekking in Volcanoes National Park, wildlife safaris in Akagera National Park, and cultural experiences in Kigali, to cross-border expeditions in Uganda, Kenya, and Tanzania. Whether you seek the Big Five safari, the mountains, the lakes, or authentic cultural encounters, we create unforgettable East Africa safari experiences tailored just for you.
+</p>
+
         </div>
       </div>
     </section>

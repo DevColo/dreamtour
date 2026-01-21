@@ -3,34 +3,34 @@ import { Shield, MapPin, Users, Heart, Clock, Award, Star, CheckCircle2 } from '
 const reasons = [
   {
     icon: Award,
-    title: 'Professional Guides',
-    description: 'Expert local guides with deep knowledge of wildlife, culture, and terrain.',
+    title: 'Professional & Knowledgeable Safari Guides',
+    description: 'Our skilled guides offer deep expertise in Rwanda and East Africa\'s wildlife, culture, and landscapes, providing reliable leadership and enriching safari experiences.',
     image: 'https://media.istockphoto.com/id/1459013777/photo/two-friends-taking-pictures-in-nature.webp?a=1&b=1&s=612x612&w=0&k=20&c=AOz6T1Z4d8qSIhw3e3AN-C6CbJvRJ5xTpuCdc9OAyfA=',
   },
   {
-    icon: MapPin,
-    title: 'Tailor-Made Itineraries',
-    description: 'Custom trips designed around your interests, pace, and travel style.',
-    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJpcHxlbnwwfHwwfHx8MA%3D%3D',
-  },
-  {
     icon: Heart,
-    title: 'Affordable Packages',
-    description: 'Premium experiences at competitive rates with transparent pricing.',
+    title: 'Budget-Friendly & Quality Safaris',
+    description: 'We offer top-quality tours at affordable rates with honest, transparent pricing making unforgettable safaris accessible to every traveler.',
     image: 'https://images.unsplash.com/photo-1607526163467-d7c344a83f7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRvdXJzfGVufDB8fDB8fHww',
   },
   {
+    icon: MapPin,
+    title: 'Custom Safari Experiences with Dream Destination Tours & Travel',
+    description: 'From Rwanda gorilla safaris to East Africa multi-day wildlife adventures, we craft tailor-made trips that suit your pace, interests, and dream safari experience.',
+    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJpcHxlbnwwfHwwfHx8MA%3D%3D',
+  },
+  {
     icon: Shield,
-    title: 'Safe & Certified',
-    description: 'Fully licensed tour operator with comprehensive insurance coverage.',
+    title: 'Trusted & Licensed Safari & Tour Operator',
+    description: 'We are a fully licensed and insured tour operator, ensuring safe, secure, and worry-free safari experiences across Rwanda, Uganda, Kenya, and Tanzania.',
     image: 'https://plus.unsplash.com/premium_photo-1677529102407-0d075eb2cbb9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2FmZXR5fGVufDB8fDB8fHww',
   },
 ];
 
 const stats = [
-  { value: '15+', label: 'Years Experience' },
-  { value: '5000+', label: 'Happy Travelers' },
-  { value: '100+', label: 'Safari Tours' },
+  { value: '10+', label: 'Years of Experience' },
+  { value: '450+', label: 'Happy Tourists' },
+  { value: '40+', label: 'Safaris & Tours' },
   { value: '4.9', label: 'Average Rating', icon: Star },
 ];
 
@@ -50,11 +50,13 @@ export const WhyChooseUsEnhanced = () => {
             Why Choose Us
           </p>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Your Trusted <span className="text-primary">Safari Partner</span>
+            Your Trusted <span className="text-primary">East Africa Safari Partner</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            We're committed to providing exceptional travel experiences with professionalism, 
-            expertise, and genuine care for every traveler.
+            Top-Rated Safari Operator in Rwanda & East Africa
+          </p>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg mt-4">
+            We offer expertly designed safari packages, trusted local guides, and exceptional customer care ensuring safe, smooth, and unforgettable wildlife and travel experiences across Rwanda, Uganda, Kenya, and Tanzania.
           </p>
         </div>
 

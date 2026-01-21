@@ -103,8 +103,11 @@ export const Testimonials = () => {
             Testimonials
           </p>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            What Our Travelers Say
+            What Our Travelers Say About Dream Destination Safaris
           </h2>
+          <p className="text-muted-foreground max-w-3xl mx-auto mb-6 text-lg">
+            Hear from our satisfied clients who have experienced unforgettable Rwanda, Uganda, Kenya, and Tanzania safaris. From Big Five wildlife encounters to multi-day cultural and adventure tours, discover why travelers trust us for safe, tailor-made East Africa safari experiences.
+          </p>
           <div className="flex items-center justify-center gap-2">
             <div className="flex items-center gap-1 bg-accent/30 px-4 py-2 rounded-full">
               <Star className="w-5 h-5 text-accent fill-accent" />
