@@ -1,29 +1,33 @@
 import { Shield, MapPin, Users, Heart, Clock, Award, Star, CheckCircle2 } from 'lucide-react';
+import Guide from '@/assets/guide.jpeg';
+import Custom from '@/assets/custom.jpeg';
+import Budget from '@/assets/budget.jpeg';
+import Tol from '@/assets/Dream TOL.jpg';
 
 const reasons = [
   {
     icon: Award,
     title: 'Professional & Knowledgeable Safari Guides',
     description: 'Our skilled guides offer deep expertise in Rwanda and East Africa\'s wildlife, culture, and landscapes, providing reliable leadership and enriching safari experiences.',
-    image: 'https://media.istockphoto.com/id/1459013777/photo/two-friends-taking-pictures-in-nature.webp?a=1&b=1&s=612x612&w=0&k=20&c=AOz6T1Z4d8qSIhw3e3AN-C6CbJvRJ5xTpuCdc9OAyfA=',
+    image: Guide,
   },
   {
     icon: Heart,
     title: 'Budget-Friendly & Quality Safaris',
     description: 'We offer top-quality tours at affordable rates with honest, transparent pricing making unforgettable safaris accessible to every traveler.',
-    image: 'https://images.unsplash.com/photo-1607526163467-d7c344a83f7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRvdXJzfGVufDB8fDB8fHww',
+    image: Budget,
   },
   {
     icon: MapPin,
     title: 'Custom Safari Experiences with Dream Destination Tours & Travel',
     description: 'From Rwanda gorilla safaris to East Africa multi-day wildlife adventures, we craft tailor-made trips that suit your pace, interests, and dream safari experience.',
-    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJpcHxlbnwwfHwwfHx8MA%3D%3D',
+    image: Custom,
   },
   {
     icon: Shield,
     title: 'Trusted & Licensed Safari & Tour Operator',
     description: 'We are a fully licensed and insured tour operator, ensuring safe, secure, and worry-free safari experiences across Rwanda, Uganda, Kenya, and Tanzania.',
-    image: 'https://plus.unsplash.com/premium_photo-1677529102407-0d075eb2cbb9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2FmZXR5fGVufDB8fDB8fHww',
+    image: Tol,
   },
 ];
 

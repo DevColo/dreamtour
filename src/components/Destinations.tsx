@@ -1,30 +1,32 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import Chimpanzee from '@/assets/chimpanzee.jpeg';
 
 const destinations = [
   {
     name: 'Rwanda',
     slug: 'rwanda',
     description: 'Discover the land of a thousand hills with incredible wildlife and culture.',
-    image: 'https://plus.unsplash.com/premium_photo-1661955494685-3e49300391a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cndhbmRhJTIwaGlsbHN8ZW58MHx8MHx8fDA%3D',
+    image: 'https://plus.unsplash.com/premium_photo-1664302882084-f5df9526963a?q=80&w=1183&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     name: 'Uganda',
     slug: 'uganda',
     description: 'Encounter majestic mountain gorillas and experience the Pearl of Africa.',
-    image: 'https://plus.unsplash.com/premium_photo-1661843402797-d51337c5e42e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z29yaWxsYXxlbnwwfHwwfHx8MA%3D%3D',
+    
+    image: Chimpanzee,
   },
   {
     name: 'Kenya',
     slug: 'kenya',
     description: 'Witness the great migration and explore iconic African savannahs.',
-    image: 'https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800&h=1000&fit=crop',
+    image: 'https://plus.unsplash.com/premium_photo-1664304362237-8040f0ecac98?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZXRhaHxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     name: 'Tanzania',
     slug: 'tanzania',
     description: 'From Serengeti plains to Zanzibar beaches, an unforgettable African journey.',
-    image: 'https://images.unsplash.com/photo-1621583628955-42fbc37bf424?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8emFuemliYXJ8ZW58MHx8MHx8fDA%3D',
+    image: 'https://plus.unsplash.com/premium_photo-1661836162757-27e50ea82ebd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
   },
 ];
 

@@ -4,6 +4,11 @@ import { PageHero } from '@/components/PageHero';
 import { Button } from '@/components/ui/button';
 import { Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Samuel from '@/assets/sam.jpeg';
+import Joel from '@/assets/joel.jpeg';
+import Theo from '@/assets/Tumusifu.jpeg';
+import JD from '@/assets/JD.jpeg';
+
 
 const team = [
   {
@@ -11,28 +16,28 @@ const team = [
     role: 'Founder & CEO',
     bio: 'With over 20 years in the travel industry, David founded Dream Destinations to share his passion for African wildlife and culture.',
     avatar: 'SI',
-    image: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=600&auto=format&fit=crop&q=60',
+    image: Samuel
   },
   {
     name: 'Joel NIYIGABA',
     role: 'Professional Wildlife Safari Tour Guide',
     bio: 'Joel ensures every safari runs smoothly, bringing 15 years of logistics expertise to create seamless travel experiences.',
     avatar: 'JN',
-    image: 'https://images.unsplash.com/photo-1614890085618-0e1054da74f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBtYW58ZW58MHx8MHx8fDA%3D',
+    image: Joel
   },
   {
     name: 'TUMUSIFU Theogene',
     role: 'Head of Operations',
-    bio: 'Theogene ensures every safari runs smoothly, bringing 15 years of logistics expertise to create seamless travel experiences.',
+    bio: 'Theogene ensures every safari runs smoothly, bringing 10 years of logistics expertise to create seamless travel experiences.',
     avatar: 'TT',
-    image: 'https://images.unsplash.com/photo-1546525848-3ce03ca516f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjBtYW58ZW58MHx8MHx8fDA%3D',
+    image: Theo,
   },
   {
     name: 'DUSABEYEZU Jeremy',
     role: 'Professional Tourist Driver Guide',
     bio: 'Jeremy specializes Professional Tourist Driver Guide, connecting travelers with local communities and different Destinations  across East Africa.',
     avatar: 'DJ',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=60',
+    image: JD,
   },
 ];
 
