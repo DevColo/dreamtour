@@ -1,9 +1,10 @@
 import { CategoryData } from '@/pages/services/CategoryPage';
+import memorial from '@/assets/tours.jpeg';
 
 export const multiDayToursData: CategoryData = {
   slug: 'multi-day-tours',
   title: 'Multi-Day Safari Tours in Rwanda & East Africa',
-  bannerImage: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1920&h=1080&fit=crop',
+  bannerImage: memorial,
   overviewTitle: 'Our Multi-Day Safari Experience in East Africa',
   overviewDescription: 'Experience 3 to 21-day safari adventures across Rwanda and East Africa, covering wildlife safaris, gorilla trekking, chimpanzee encounters, and cultural experiences. Explore multiple destinations at your own pace with tailor-made itineraries.',
   experienceTitle: 'Our Multi-Day Safari Experience in East Africa',

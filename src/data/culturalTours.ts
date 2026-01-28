@@ -1,9 +1,10 @@
 import { CategoryData } from '@/pages/services/CategoryPage';
+import culture3 from '@/assets/culture3.jpeg';
 
 export const culturalToursData: CategoryData = {
   slug: 'cultural-tours',
   title: 'Authentic Cultural Tours in Rwanda & Uganda',
-  bannerImage: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1920&h=1080&fit=crop',
+  bannerImage: culture3,
   overviewTitle: 'Our Cultural Tour Experience in Rwanda',
   overviewDescription: 'Immerse yourself in authentic African culture with our expertly designed cultural tours. Explore Rwanda’s traditional dance heritage, museums, and historical sites, and experience the Batwa culture in Uganda. Visit Gorilla Guardian Villages, interact with local communities, and uncover the rich traditions, vibrant lifestyles, and unique customs of East Africa.',
   experienceTitle: 'Our Cultural Tour Experience in Rwanda',

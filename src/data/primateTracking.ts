@@ -3,7 +3,7 @@ import { CategoryData } from '@/pages/services/CategoryPage';
 export const primateTrackingData: CategoryData = {
   slug: 'primate-tracking',
   title: 'Primate Tracking in Rwanda & Uganda',
-  bannerImage: 'https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=1920&h=1080&fit=crop',
+  bannerImage: 'https://plus.unsplash.com/premium_photo-1686232984838-7a98edf2e337?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8',
   overviewTitle: 'Our Primate Tracking Experience',
   overviewDescription: 'Get up close with mountain gorillas and chimpanzees in their natural habitats. Trek the forests of Volcanoes National Park, Nyungwe National Park, Bwindi Impenetrable Forest, and Mgahinga National Park for unforgettable wildlife encounters. Book your gorilla and chimpanzee adventure with Dream Destination Tours & Travel today.',
   experienceTitle: 'Our Primate Tracking Experience',

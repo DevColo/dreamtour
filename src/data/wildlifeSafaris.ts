@@ -3,7 +3,7 @@ import { CategoryData } from '@/pages/services/CategoryPage';
 export const wildlifeSafarisData: CategoryData = {
   slug: 'wildlife-safaris',
   title: 'Wildlife Safaris in Rwanda & East Africa',
-  bannerImage: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1920&h=1080&fit=crop',
+  bannerImage: 'https://images.unsplash.com/photo-1581852017103-68ac65514cf7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWxlcGhhbnR8ZW58MHx8MHx8fDA%3D',
   overviewTitle: 'Our Wildlife Safari Experience',
   overviewDescription: 'Discover East Africa\'s best wildlife safaris—from the Big Five in Akagera National Park to vast savannas in Tanzania and Uganda. Expert-guided, safe, and unforgettable African safari adventures showcasing majestic wildlife, breathtaking landscapes, and authentic experiences that create memories to last a lifetime.',
   experienceTitle: 'Our Wildlife Safari Experience',
